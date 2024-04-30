@@ -33,7 +33,7 @@ public class PMain2 {
 		//이모티콘 출력 \(^ _ ^)/ -> \\로 써야 backslash가 문자로 인식됨
 		System.out.println("\\(^ _ ^)/");
 		
-		//이모티콘 출력 (".") -> \뒤쪽으로 문법기호 붙이면 문자로 인식함!
+		//이모티콘 출력 (".") -> . 뒤쪽으로 Backslash \ 붙이면 문자로 인식함!
 		System.out.printf("(\".\")"); 
 
 	}
