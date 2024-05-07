@@ -14,7 +14,8 @@ public class FMain6 {
 		System.out.println(which_is_bigger(3, 5));
 		System.out.println(which_is_bigger(30, 5));
 		System.out.println(which_is_bigger(3, 3));
-		
+		dinner_choice();
+
 	}
 	
 	//random integer printer
@@ -43,6 +44,17 @@ public class FMain6 {
 		else if(subtraction<0){ result="뒤";}
 		else if(subtraction==0){ result="같음";}
 		return result;
+	}
+	//오늘의 저녁메뉴 고르기 2가지중 하나, 랜덤한 숫자 2개 뽑아서 먼저 뽑힌놈이 크면 1번메뉴 아니면 2번메뉴
+	public static void dinner_choice() {
+		String menu1="고등어 조림";
+		String menu2="김밥";
+		int num1=rand_gen_int();
+		int num2=rand_gen_int();
+		String result=which_is_bigger(num1, num2);
+		if(result.equals("앞")){System.out.println(menu1);}
+		else if(result.equals("뒤")){System.out.println(menu2);}
+		else System.out.println("둘 다\n");
 	}
 }
 	
