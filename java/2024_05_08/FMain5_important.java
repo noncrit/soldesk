@@ -11,7 +11,8 @@ public class FMain5 {
 		int total=0;
 		//arith_seq2(1000,total);
 		//System.out.println(fac(5));
-		System.out.println(fibonachi(7));
+		//System.out.println(fibonachi(7));
+		System.out.println(digit_num_add(177));
 	}
 	
 	//등차수열 함수(내가 짠 버전)
@@ -51,5 +52,16 @@ public class FMain5 {
 	public static int fibonachi(int x) {
 		int total=(x==1||x==2)?1:(fibonachi(x-1)+fibonachi(x-2));
 		return total;
+	}
+	//숫자 하나를 넣어서 각 자릿수의 숫자를 더한 값 구하기
+	public static int digit_num_add(int x) {
+		if(x<10) {
+			int total_sum=x;
+			return total_sum;
+			}
+		else {
+			int total_sum=(x%10)+digit_num_add(x/10);
+			return total_sum;
+			}
 	}
 }
