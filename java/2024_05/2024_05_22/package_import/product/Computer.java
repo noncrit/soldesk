@@ -1,0 +1,33 @@
+package com.kim.may222.product;
+
+public class Computer extends Product{
+
+	String cpu;
+	int ram;
+	int hdd;
+	
+	public Computer() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	
+	public Computer(String name, int price, String item, String cpu, int ram, int hdd) {
+		super(name, price, item);
+		this.cpu = cpu;
+		this.ram = ram;
+		this.hdd = hdd;
+	}
+
+
+
+
+	@Override
+	public void print_Product() {
+		// TODO Auto-generated method stub
+		super.print_Product();
+		System.out.printf("CPU :	%s\n", this.cpu);
+		System.out.printf("RAM :	%d GB\n", this.ram);
+		System.out.printf("HDD :	%d GB\n", this.hdd);
+	}
+}
