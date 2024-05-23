@@ -1,0 +1,40 @@
+package com.kim.may23_2.main;
+//****Factory pattern 예시***
+// 중요!!! 구현 신기하다
+
+import com.kim.may23_2.student.Academy;
+import com.kim.may23_2.student.Student;
+
+//학원에서 학생을 상담한 후에 해당 커리큘럼 대기자로 등록하려함
+//학생의 정보 : 이름, 나이
+//대기자로 등록한 순서대로 번호값을 부여하고싶음
+//객체가 필요 없다?(멤버 변수가 필요 없다) : static 메소드 기반
+//객체가 필요는 하다 : 하나만 필요하다(싱글톤 패턴)
+//				: 여러개가 필요한데 찍어내는 틀이 필요하다(팩토리 패턴)
+
+public class FMain1 {
+	
+	public static void main(String[] args) {
+		
+		Academy ac = new Academy();
+		
+		Student s1 = ac.consult("k", 6);
+		s1.printInfo();
+		
+		Student s2 = ac.consult("k", 7);
+		s2.printInfo();
+		
+		
+		/*
+		String tag_array[] = null;
+		Num_tag n = new Num_tag(tag_array);
+		
+		Student a = new Student("a", 7);
+		
+		a.setNum_tag( n.decier(tag_array, a.getName()) );
+		*/
+		
+		
+		
+	}
+}
