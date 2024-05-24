@@ -4,6 +4,8 @@
 
 차라리 split으로 써보자!!!! 2024_05_24 마지막 시간
 //split으로 테스트중
+// 문자열 중간에 알파벳 들어가면 split에서 못거르는 현상있음(????)
+
 package com.kim.may_24_2.main;
 
 public class TextMain2_test {
