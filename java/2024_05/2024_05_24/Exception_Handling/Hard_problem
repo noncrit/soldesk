@@ -3,3 +3,43 @@
 //예) 1a123/45?6 의 경우 추출될 숫자는 1, 123, 45, 6이어야한다. 
 
 차라리 split으로 써보자!!!! 2024_05_24 마지막 시간
+//split으로 테스트중
+package com.kim.may_24_2.main;
+
+public class TextMain2_test {
+	//main 에 뭔가를 입력받을 예정
+	// a/b/c/d/e...
+	// 1/2/3/....=>총합 / 평균값 구하기
+	// 숫자라면 =>총합 / 평균값 구하기
+	// 글자 부분은 넘기기
+	
+	// / 외의 문자도 처리 할 수 있게 짜는중
+	//이렇게 짜면 한 자리수 밖에 입력 못받음...
+	//*************십의 자리수 이상인 수를 어떻게 표현할 것인가???????******************
+	
+	//마지막 시간 수정 -> 차라리 split 쓰는게 나을듯?
+	public static void main(String[] args) {
+		
+		String a = new String("1/10/100");	
+		printer(a);
+	}
+	
+	public static void printer(String a) {
+		
+		int sum=0;
+		int tmp=0;
+		
+		String [] s = a.split("[^0-9]*");
+		for (int i = 0; i < s.length; i++) {
+			
+			System.out.printf(s[i]+ " ");
+			Integer convert = Integer.parseInt(s[i]);
+			tmp=convert.intValue();
+			sum+=tmp;
+		}
+		System.out.println();
+		System.out.printf("sum : %d\n",sum);
+		
+	}
+	
+}
