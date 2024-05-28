@@ -10,7 +10,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 //37.0014431(y) 127.1245541(x)
-//	6fba57e94e4317694bf83087f3fe44f5 (rest key) //원래는 노출 금지!!! 환경변수로 바꾸기!!!
+//(rest key) //노출 금지! 카카오 dev 가서 직접 받아오기
 public class LocSearchMain {
 	// 기준점 주변 반경 5km이내의 입력받은 검색 키워드가 포함된 가게들을 거리 기준으로 정렬하기
 	
