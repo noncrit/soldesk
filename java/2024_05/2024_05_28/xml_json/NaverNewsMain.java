@@ -31,7 +31,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 //6vURfrQzt4AT0WX0nJc9
 
 //Secret key
-//8Mf7WTOGQY //환경변수로 바꿔놓기-- 절대 노출 금지
+//
 
 //검색 : 요청 URL (XML 방식)
 //	https://openapi.naver.com/v1/search/news.xml
@@ -84,10 +84,11 @@ public class NaverNewsMain {
 			
 			
 //			//헤더 추가하는 코드 라인, 서버 내부로 데이터를 전송할 때 사용(보안 유지하면서 전송)
+			//네이버 dev 사이트 들어가면 어플리케이션에 키 있음
 //			URL u = new URL(address);
 //			HttpsURLConnection huc = (HttpsURLConnection) u.openConnection();
-//			huc.addRequestProperty("X-Naver-Client-Id", "6vURfrQzt4AT0WX0nJc9");
-//			huc.addRequestProperty("X-Naver-Client-Secret", "8Mf7WTOGQY");
+//			huc.addRequestProperty("X-Naver-Client-Id", "{key}");
+//			huc.addRequestProperty("X-Naver-Client-Secret", "{key}");
 //			
 //			//InputStream 이해 잘 안되니 복습할 때 잘 보기
 //			InputStream is = huc.getInputStream();
@@ -96,8 +97,8 @@ public class NaverNewsMain {
 			
 			/////새로 추가한 기능으로 다시 구현
 			HashMap<String, String> headers = new HashMap<String, String>();
-			headers.put("X-Naver-Client-Id", "6vURfrQzt4AT0WX0nJc9");
-			headers.put("X-Naver-Client-Secret", "8Mf7WTOGQY");
+			headers.put("X-Naver-Client-Id", "{key}");
+			headers.put("X-Naver-Client-Secret", "{key}");
 			InputStream is = HttpClient.download(address, headers);
 //			String result = HttpClient.convert(is, "UTF-8");
 //			System.out.println(result);
