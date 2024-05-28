@@ -42,7 +42,7 @@ public class LocSearchMain {
 			//헤더처리
 			//$는 여기부터 입력이라는 표시		
 			HashMap<String, String> headers = new HashMap<String, String>();
-			headers.put("Authorization", "KakaoAK 6fba57e94e4317694bf83087f3fe44f5");
+			headers.put("Authorization", "KakaoAK {secret key}");
 			
 			InputStream is = HttpClient.download(address, headers);
 			String str = HttpClient.convert(is, "UTF-8");
