@@ -36,7 +36,7 @@ public class HttpClient {
 		if (address.startsWith("https")) {
 			HttpsURLConnection huc = (HttpsURLConnection) u.openConnection();
 			Set<String> headerName = headers.keySet();
-			for(String hn : headerName) {
+			for(String hn : headerName) {	//확장 for 문
 				huc.addRequestProperty(hn, headers.get(hn));
 			}
 			return huc.getInputStream();
