@@ -18,3 +18,16 @@
 
   if, else if, switch => 컴파일러의 예상 연산량 줄이기 
   ex) 은행 atm 거래 => 보통 거래(입금,출금,잔액 조회) 1회, 거래 종료 1회로 루틴이 끝나기 때문에 거래 종료를 맨앞 if에 두고, 그 else if에는 접근량 많이 예상되는 순서대로 두는게 좋을듯?
+
+
+  public static void printMul(int ... n) { } (파라미터 무제한으로 쓸 때 ... 사용)
+  함수 내에서는 배열처럼 사용하면 됨
+
+ex)  	public static void printMul(int ... n) {
+		      int mul=1;
+		
+	      	for (int i = 0; i < n.length; i++) {
+		    	mul*=n[i];
+          }
+      	}
+
