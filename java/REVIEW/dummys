@@ -2,4 +2,9 @@
   
   오버로딩
   
-  hash 관련 -> linear probing,quadratic probing
+  hash bucket 관련 -> Open addressing (linear probing,quadratic probing) // Separate Chaining
+
+  알고리즘 관련 -> 생일문제(birthday problem) ,Horner's method(다항식 -> 단항식으로 바꿔서 표현하는 재귀적 방법)
+  (shift 연산 효율성) 31 * N = 32N - N = (2<<5) * N - N
+
+  bitwise 연산자(Java)
