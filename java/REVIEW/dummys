@@ -1,22 +1,22 @@
 길진않은데 정리할것들
   
-  오버로딩
+오버로딩
   
-  hash bucket 관련 -> Open addressing (linear probing,quadratic probing) // Separate Chaining
+hash bucket 관련 -> Open addressing (linear probing,quadratic probing) // Separate Chaining
 
-  알고리즘 관련 -> 생일문제(birthday problem) ,Horner's method(다항식 -> 단항식으로 바꿔서 표현하는 재귀적 방법)
+알고리즘 관련 -> 생일문제(birthday problem) ,Horner's method(다항식 -> 단항식으로 바꿔서 표현하는 재귀적 방법)
   
-  (shift 연산 효율성) 31 * N = 32N - N = (2<<5) * N - N => 이런식으로 2^n 꼴이면 단순화 가능
+(shift 연산 효율성) 31 * N = 32N - N = (2<<5) * N - N => 이런식으로 2^n 꼴이면 단순화 가능
 
-  반복의 구현 -> 재귀함수 vs 반목문(while 이나 기타 등등), 어느 것이 유리한가? // 꼬리 재귀(tail call recursive 참조)
+반복의 구현 -> 재귀함수 vs 반목문(while 이나 기타 등등), 어느 것이 유리한가? // 꼬리 재귀(tail call recursive 참조)
 
-  bitwise 연산자(Java)
+bitwise 연산자(Java)
 
-  수식입력툴(Latex)
+수식입력툴(Latex)
 
-  main(String[] args) => args라는 String 배열을 파라미터로 받는 main이라는 함수를 생성
+main(String[] args) => args라는 String 배열을 파라미터로 받는 main이라는 함수를 생성
 
-  if, else if, switch => 컴파일러의 예상 연산량 줄이기 
+if, else if, switch => 컴파일러의 예상 연산량 줄이기 
   ex) 은행 atm 거래 => 보통 거래(입금,출금,잔액 조회) 1회, 거래 종료 1회로 루틴이 끝나기 때문에 거래 종료를 맨앞 if에 두고, 그 else if에는 접근량 많이 예상되는 순서대로 두는게 좋을듯?
 
 
@@ -30,4 +30,12 @@ ex)  	public static void printMul(int ... n) {
 		    	mul*=n[i];
           }
       	}
+
+내 코드 최적화 관련 간단 예제
+( https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_16/PMain4%2Boptimization_important.java )
+가위 1, 바위 2, 보 3으로 구현했는데 서로 빼준 값에다 +2 한뒤 %3 연산을 미리 해주면 경우의 수를 3가지로 줄인 채로 연산이 가능함
+(무승부 2, 패배 1, 승리 0) 3 가지로 단순화 가능
+ex) 나 : 바위 // 컴퓨터 : 가위 => 2 - 1 == 1 여기에 (+2)%3 연산을 진행하면 (1+2)%3=0 으로 다른 승리하는 경우들( 바위(2)vs가위(1) , 보(3) vs 바위(2) ) 모두 동일함
+빼는거 떠올리기 전까지는 무식하게 if로 처리했음...
+
 
