@@ -2,3 +2,6 @@
 // 클래스            객체 변수             =             new                           클래스();	
 // (자료형) ( 참조값 저장 위치(객체 변수) )   = (Heap 할당, 인스턴스 생성, 참조값 리턴) (생성자(Constructor) 호출)();	
 예) HashMap<String, Student> students = new HashMap<String, Student>(); 
+
+//return new Me(); 이런식으로 객체를 리턴할 수 있음
+//거의 안해본 방식이니 익숙해지기...
