@@ -9,3 +9,10 @@ public class Bird extends Animal implements Bite, Eat .....
 
 상속받는 클래스는 Animal 하나, 인터페이스는 여러 개를 받고 있음
 
+//**Abstract**
+
+( https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_22/Abstract/animal/Animal.java )
+//Abstract	: 미완성된 내용이 있는 메소드(나중에 기능을 추가하겠다)
+//하위 클래스에서 반드시 override해서 기능을 완성시켜야함
+//** Abstract 메소드가 하나라도 클래스 내부에 존재하면, 해당 클래스는 abstract 클래스 이거나 interface 여야함!! **
+
