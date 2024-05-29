@@ -1,0 +1,13 @@
+정리할 내용 : Escape Sequence
+
+\ =>
+
+(처리순서 => 맨 앞부터 뒤로)
+\t - Tab키(가로 줄 맞춤)
+\n - new line(세로줄 맞추는 용도)
+\r - carriage return (커서 맨앞으로 이동)
+\r\n - 엔터키
+\b - backspace (문자 지우는 용도) // derecated at JAVA
+\0 - 빈칸(공백)(Space키)
+
+\b 는 바이트 단위 표시인데 C에서는 문자 1개당 1바이트, JAVA에서는 문자 1개당 2바이트가 할당됨.
