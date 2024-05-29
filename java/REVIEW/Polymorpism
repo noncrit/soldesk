@@ -1,0 +1,9 @@
+(https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_22/Abstract/main/AMain3.java)
+
+//다형성(Polymorphism)
+//Poly(많은) + Morph(모양)
+//상위 타입의 변수에 하위 타입 객체를 담는 것이 가능 -> 같은 형태로 다른 기능을 하는게 가능
+//Override 와 아주 밀접한 관련이 있음
+
+//근데 이게 직관성 측면에서는 좋은지 모르겠음
+
