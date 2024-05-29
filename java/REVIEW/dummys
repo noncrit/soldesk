@@ -13,3 +13,5 @@
   bitwise 연산자(Java)
 
   수식입력툴(Latex)
+
+  main(String[] args) => args라는 String 배열을 파라미터로 받는 main이라는 함수를 생성
