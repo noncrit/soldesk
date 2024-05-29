@@ -1,6 +1,11 @@
 //(https://github.com/noncrit/soldesk/tree/main/java/2024_05/2024_05_21)
 
 //자바에는 다중 상속이 없음!!
+//대신 클래스 + 인터페이스 요런식의 유사 다중 상속은 가능함
+( https://github.com/noncrit/soldesk/tree/main/java/2024_05/2024_05_22/Abstract )
+//인터페이스는 여러개 상속가능
+//예시
+public class Bird extends Animal implements Bite, Eat .....
 
-
+상속받는 클래스는 Animal 하나, 인터페이스는 여러 개를 받고 있음
 
