@@ -1,17 +1,17 @@
 //(https://github.com/noncrit/soldesk/tree/main/java/2024_05/2024_05_21)
-
 //자바에는 다중 상속이 없음!!
 //대신 클래스 + 인터페이스 요런식의 유사 다중 상속은 가능함
 ( https://github.com/noncrit/soldesk/tree/main/java/2024_05/2024_05_22/Abstract )
 //인터페이스는 여러개 상속가능
+
 //예시
 public class Bird extends Animal implements Bite, Eat .....
-
 상속받는 클래스는 Animal 하나, 인터페이스는 여러 개를 받고 있음
+//상속받는 자식 클래스도 고유한 메소드, 멤버 선언이 가능한데 상속(inheritate)보다는 확장(extends)이 맞는 것 같다...
 
 //**Abstract**
-
 ( https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_22/Abstract/animal/Animal.java )
+
 //Abstract	: 미완성된 내용이 있는 메소드(나중에 기능을 추가하겠다)
 //하위 클래스에서 반드시 override해서 기능을 완성시켜야함
 //** Abstract 메소드가 하나라도 클래스 내부에 존재하면, 해당 클래스는 abstract 클래스 이거나 interface 여야함!! **
@@ -23,7 +23,9 @@ public class Bird extends Animal implements Bite, Eat .....
 
 //익명 내부 클래스(Anonymous inner class)
 //단 한번만 사용 될 수 있음, 오직 하나의 객체만을 사용할 수 있는 일회용 클래스
+
 (https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_22/Abstract/main/AMain2.java)
+
 예시)
 Avengers a = new Avengers("파커",19) {
 			//여기 중괄호 안쪽 부분이 익명 내부 클래스
@@ -31,6 +33,6 @@ Avengers a = new Avengers("파커",19) {
 			public void attack() {
 				System.out.println("거미줄 발사!");		
 			}
-	};
+};
 
 
