@@ -1,0 +1,8 @@
+(https://github.com/noncrit/soldesk/tree/main/java/2024_05/2024_05_22/Encapsulation)
+
+//캡슐화(Encapsulation)
+//멤버변수에 접근할 수 있는 경로를 제한하기!
+//외부에 노출할 필요가 없는 정보를 숨기는 기능(abstraction)
+
+//보통은 클래스 멤버를 private으로 선언하고 getter,setter등으로만 접근하도록 제한함
+//필수적인 변수 접근 말고는 가능한 변수 접근 루트를 최대한 줄이는게 관리 측면에서 훨씬 수월함
