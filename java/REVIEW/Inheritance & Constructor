@@ -16,6 +16,7 @@ public class Bird extends Animal implements Bite, Eat .....
 //하위 클래스에서 반드시 override해서 기능을 완성시켜야함
 //** Abstract 메소드가 하나라도 클래스 내부에 존재하면, 해당 클래스는 abstract 클래스 이거나 interface 여야함!! **
 (참고)
+(https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_22/Abstract/bite/Bite.java)
 //클래스 : 멤버 변수, 메소드 등등
 //추상 메소드 : 멤버 변수, 메소드, 추상 메소드 // 단점 : 객체 생성 불가능!!!
 //인터페이스 : 추상 메소드, 멤버 상수 // 객체 생성 불가능
