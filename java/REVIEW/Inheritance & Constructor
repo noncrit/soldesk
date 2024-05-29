@@ -21,3 +21,16 @@ public class Bird extends Animal implements Bite, Eat .....
 //추상 메소드 : 멤버 변수, 메소드, 추상 메소드 // 단점 : 객체 생성 불가능!!!
 //인터페이스 : 추상 메소드, 멤버 상수 // 객체 생성 불가능
 
+//익명 내부 클래스(Anonymous inner class)
+//단 한번만 사용 될 수 있음, 오직 하나의 객체만을 사용할 수 있는 일회용 클래스
+(https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_22/Abstract/main/AMain2.java)
+예시)
+Avengers a = new Avengers("파커",19) {
+			//여기 중괄호 안쪽 부분이 익명 내부 클래스
+			@Override
+			public void attack() {
+				System.out.println("거미줄 발사!");		
+			}
+	};
+
+
