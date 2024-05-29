@@ -1,0 +1,8 @@
+call by value - 변수의 값을 복사해서 함수의 파라미터 값으로 사용하는 것
+call by reference - 변수를 참조하는 주소값을 파라미터로 전달하는 것
+함수에서 파라미터로 끌어와서 써도 배열의 주소값을 그대로 쓰니까 함수에서 수정된 사항이 원래 배열에도 영향을 줌
+중요!!!
+근데 java는 파라미터를 넘기는 과정에서 call by value 방식으로 값만 넘김(즉 파라미터 넘어가는게 call by value 방식임)
+결국 call by reference인척하는 call by value 방식임
+
+(https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_14/PMain5_important_callby.java) 참고
