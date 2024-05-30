@@ -8,4 +8,7 @@ window - show view - Data Source Explorer - DBconnection folder 우클릭 new - 
 new driver def (버전 특정) oracle thin 11 선택 - jar list 탭에서 오라클 11버전 연동되는 ojdbc8 압축파일 지정 (instatnc client 폴더 안에 있음)
 그 다음 general 탭에서 sid랑 기타 조건 입력해서 로그인 설정해주기
 파라미터 SID : xe, HOST : IPv4 주소, PortNum : 1521(고정), Username,pw : 관리자 말고 이용자 id,pw 입력
+connection test 해보고 넘어가기
+--------------------------
+앞으로 DB 수업 전에는 Data resource explorer에서 DB서버 만든거 connect 꼭 해주기 
 
