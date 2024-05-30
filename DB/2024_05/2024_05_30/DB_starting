@@ -56,4 +56,6 @@ create table student(name char, age number);  //테이블 생성
 insert into student values('z',100);
 select * from student;
 drop table student cascade constraint purge;  //테이블 삭제
+-------------------------
+OracleDB (11gR2 Xe) 설치 완료
 
