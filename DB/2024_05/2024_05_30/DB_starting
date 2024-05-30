@@ -45,5 +45,6 @@ C:\Users\sdedu\Desktop\DB
 create tablespace [이름] datafile '지정할경로/파일명.dbf'  // create tablespace mine datafile 'C:\Users\sdedu\Desktop\DB/one.dbf' size 500m;
 Tablespace 접근 권한 부여
 alter user [id] default tablespace [TS이름]              // alter user jin default tablespace mine;  //만들어둔 유저에게 tablespace 접근 권한 부여
+--------------------------------------------------------------
 
 
