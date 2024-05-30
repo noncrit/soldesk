@@ -1,2 +1,4 @@
 이클립스 패스 새로 만들었음
 JDK,컴파일러 설정 새로하기
+preferences->JRE ->open jdk 1.8.0 버전 지정
+Compiler -> 1.8 버전
