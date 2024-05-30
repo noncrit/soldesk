@@ -1,6 +1,8 @@
 SQL(Structured Query Language)(구조적 질의 언어) - DBMS에서 데이터를 관리, 처리하기 위해 설계된 언어
 DBMS(DataBase + Management System)
 
+cmd상에서는 세미콜론 쓰지말고, sql 입력할때만 사용!!
+
 DBA admin : seok , asd321
 DBA user  : jin  , asd321
 
@@ -34,7 +36,7 @@ oracleDB에 접속을 하려면 instant client 라이브러리가 필요 -> 검�
 ID : 관리자(DBA) 계정 ID
 PW : 관리자(DBA 계정 PW
 ip : ipv4 , 포트번호 : 1521 / SID : xe 고정
-sqlplus seok/asd321@192.168.0.15:1521/xe; (visual c++ 없으면 오류나니 설치하기) //DBA admin 계정으로 연결하는 과정(로그인)
+sqlplus seok/asd321@192.168.0.15:1521/xe (visual c++ 없으면 오류나니 설치하기) //DBA admin 계정으로 연결하는 과정(로그인) (세미콜론 넣으면 오류난다!!!)
 ----------------------
 일반 이용자 계정 발급
 create user ID identifed by PW; // jin, asd321
@@ -46,5 +48,6 @@ create tablespace [이름] datafile '지정할경로/파일명.dbf'  // create t
 Tablespace 접근 권한 부여
 alter user [id] default tablespace [TS이름]              // alter user jin default tablespace mine;  //만들어둔 유저에게 tablespace 접근 권한 부여
 --------------------------------------------------------------
+instant client 경로에서 만들어진 계정으로 접속하기(
 
 
