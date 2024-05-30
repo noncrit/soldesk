@@ -27,8 +27,8 @@ grant connect, resource, dba to seok; 입력   //
 ----------------
 DB서버에 관리자 계정으로 접속 진행 => 자기 자신의 계정을 만들기 위해
 oracleDB에 접속을 하려면 instant client 라이브러리가 필요 -> 검색후 2번째 페이지에서 64bit window, Version 21.14.0.0.0 - > basic, sqlplus, jdbc 한 군데에 받아서 압축풀기(학원에서는 oracle_setup)
-압축해제한 폴더에 들어가서 sqlplus id/비번@ip:포트번호/SID
+압축해제한 폴더에 들어가서 sqlplus ID/PW@ip:포트번호/SID
 ID : 관리자(DBA) 계정 ID
 PW : 관리자(DBA 계정 PW
 ip : ipv4 , 포트번호 : 1521 / SID : xe 고정
-sqlplus seok/asd321@192.168.0.15:1521/xe
+sqlplus seok/asd321@192.168.0.15:1521/xe (visual c++ 없으면 오류나니 설치하기)
