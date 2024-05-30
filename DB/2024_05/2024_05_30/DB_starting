@@ -12,3 +12,10 @@ OracleDB 사용 예정
 
 3.설치 옵션 정리
 기본경로로 쭉 설치, 해킹소문! 
+
+4. 아이콘 삭제 금지( get started 뭐시기)
+
+5. DB 서버 가동중인가 확인, 테스트 진행
+services.msc - > OracleServiceXE, OracleXETNSListener 실행중인가 확인
+테스트 - 원격 접속이 되는 관리자 계정 만들기
+cmd -> sqlplus / as sysdba 입력 ( sqlplus -> oracleDB 접속 프로그램, / -> 현재 OS에 로그인된 계정을 사용하겠다, as sysdba ->권한 설정 : 최상위 관리자
