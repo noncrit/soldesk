@@ -4,3 +4,10 @@ DBMS(DataBase + Management System)
 DB에서 SQL 문으로 필요한 데이터를 뽑아내기
 
 OracleDB 사용 예정
+
+---설치 루틴(은근 까다로움...)---------
+1. 오라클 설치 (https://www.oracle.com/database/) 
+
+2.xe prior 11g r2 다운로드 / 압축 풀기
+
+3.
