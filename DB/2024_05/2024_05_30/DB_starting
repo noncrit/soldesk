@@ -48,6 +48,12 @@ create tablespace [이름] datafile '지정할경로/파일명.dbf'  // create t
 Tablespace 접근 권한 부여
 alter user [id] default tablespace [TS이름]              // alter user jin default tablespace mine;  //만들어둔 유저에게 tablespace 접근 권한 부여
 --------------------------------------------------------------
-instant client 경로에서 만들어진 계정으로 접속하기(
-
+instant client 경로에서 만들어진 계정으로 접속하기
+sqlplus jin/asd321@192.168.0.15:1521/xe (세미콜론 안씀!!)
+접속
+-----------------------
+create table student(name char, age number);  //테이블 생성
+insert into student values('z',100);
+select * from student;
+drop table student cascade constraint purge;  //테이블 삭제
 
