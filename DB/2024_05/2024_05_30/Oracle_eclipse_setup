@@ -2,3 +2,10 @@
 JDK,컴파일러 설정 새로하기
 preferences->JRE ->open jdk 1.8.0 버전 지정
 Compiler -> 1.8 버전
+
+이클립스로 DB랑 연동해서 사용 할 예정
+window - show view - Data Source Explorer - DBconnection folder 우클릭 new - OracleDB 선택
+new driver def (버전 특정) oracle thin 11 선택 - jar list 탭에서 오라클 11버전 연동되는 ojdbc8 압축파일 지정 (instatnc client 폴더 안에 있음)
+그 다음 general 탭에서 sid랑 기타 조건 입력해서 로그인 설정해주기
+파라미터 SID : xe, HOST : IPv4 주소, PortNum : 1521(고정), Username,pw : 관리자 말고 이용자 id,pw 입력
+
