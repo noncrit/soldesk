@@ -40,7 +40,10 @@ sqlplus seok/asd321@192.168.0.15:1521/xe; (visual c++ 없으면 오류나니 설
 create user ID identifed by PW; // jin, asd321
 grant connect, resource to jin; // 권한 부여
 ----------------------
-Tablespace 할당(DB로 사용할 공간)  - Tablespace-> 보안성 뛰어나고, 기능이 강력한 파일
+Tablespace 할당(DB로 사용할 공간)  - Tablespace-> 보안성 뛰어나고, 기능이 강력한 파일  //Tablespace : mine , filename : one
 C:\Users\sdedu\Desktop\DB
 create tablespace [이름] datafile '지정할경로/파일명.dbf'  // create tablespace mine datafile 'C:\Users\sdedu\Desktop\DB/one.dbf' size 500m;
+Tablespace 접근 권한 부여
+alter user [id] default tablespace [TS이름]              // alter user jin default tablespace mine;  //만들어둔 유저에게 tablespace 접근 권한 부여
+
 
