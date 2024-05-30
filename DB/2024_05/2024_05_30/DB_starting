@@ -24,7 +24,7 @@ services.msc - > OracleServiceXE, OracleXETNSListener 실행중인가 확인
 테스트 - 원격 접속이 되는 관리자 계정 만들기
 cmd -> sqlplus / as sysdba 입력 ( sqlplus -> oracleDB 접속 프로그램, / -> 현재 OS에 로그인된 계정을 사용하겠다, as sysdba ->권한 설정 : 최상위 관리자
 create user [ID명] identified by [비밀번호];  //seok, asd321
-grant connect, resource, dba to seok; 입력   //
+grant connect, resource, dba to seok; 입력   //권한 부여(dba는 관리자)
 ----------------
 DB서버에 관리자 계정으로 접속 진행 => 자기 자신의 계정을 만들기 위해
 oracleDB에 접속을 하려면 instant client 라이브러리가 필요 -> 검색후 2번째 페이지에서 64bit window, Version 21.14.0.0.0 - > basic, sqlplus, jdbc 한 군데에 받아서 압축풀기(학원에서는 oracle_setup)
@@ -36,5 +36,7 @@ PW : 관리자(DBA 계정 PW
 ip : ipv4 , 포트번호 : 1521 / SID : xe 고정
 sqlplus seok/asd321@192.168.0.15:1521/xe; (visual c++ 없으면 오류나니 설치하기) //DBA admin 계정으로 연결하는 과정(로그인)
 ----------------------
-관리자 권한으로 이용자 계정 발급
+일반 이용자 계정 발급
 create user ID identifed by PW; // jin, asd321
+grant connect, resource to jin; // 권한 부여
+
