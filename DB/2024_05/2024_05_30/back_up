@@ -1,0 +1,23 @@
+SQL(Structured Query Language)(구조적 질의 언어) - DBMS에서 데이터를 관리, 처리하기 위해 설계된 언어
+DBMS(DataBase + Management System)
+
+DB에서 SQL 문으로 필요한 데이터를 뽑아내기
+
+OracleDB 사용 예정
+
+---설치 루틴(은근 까다로움...)---------
+1. 오라클 설치 (https://www.oracle.com/database/) 
+
+2.xe prior 11g r2 다운로드 / 압축 풀기
+
+3.설치 옵션 정리
+기본경로로 쭉 설치, 해킹소문! 
+
+4. 아이콘 삭제 금지( get started 뭐시기)
+
+5. DB 서버 가동중인가 확인, 테스트 진행
+services.msc - > OracleServiceXE, OracleXETNSListener 실행중인가 확인
+테스트 - 원격 접속이 되는 관리자 계정 만들기
+cmd -> sqlplus / as sysdba 입력 ( sqlplus -> oracleDB 접속 프로그램, / -> 현재 OS에 로그인된 계정을 사용하겠다, as sysdba ->권한 설정 : 최상위 관리자
+create user [ID명] identified by [비밀번호];  //seok, asd321
+grant connect, resource, dba to seok; 입력   //
