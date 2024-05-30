@@ -1,0 +1,12 @@
+OracleDB 11gR2 XE 를 설치했음
+
+오라클 서버는 크게 3단계로 진화했는데( i / g / c)
+7i,8i,9i 형태  -> i는 internet의 약자, 데이터베이스에 인터넷 환경을 지원하면서 버전 구분용으로 i가 붙음
+10g, 11g       -> g는 Grid의 약자, grid computing 도입된 버전들
+(Grid computing -> 여러 컴퓨터를 그리드로 묶어서 보다 효율적인 자원 배분/활용을 구현한 컴퓨팅 모델)
+12c, 13c, 19c, 21c -> c는 Cloud의 약자, Cloud computing 기능이 구현된 버전
+
+XE(Datapress Express Editioin), SE2(Database Standard Editon 2),EE(Database Enterpise Edition) : DB 제품군 분류
+SE2  : CPU 소켓을 2개까지만 사용하는 저사양 DB
+EE   : 고사양 서버에서 사용이 가능한 기업용 DB(당연히 돈 내야함)
+XE   : 개발용 or 교육용으로 무료 사용이 가능한 DB // 개발용으로 쓰다가 상업용으로 판매하는 것이 불가능!
