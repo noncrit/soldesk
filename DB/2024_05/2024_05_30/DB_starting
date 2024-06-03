@@ -29,7 +29,7 @@ create user [ID명] identified by [비밀번호];  //seok, asd321
 grant connect, resource, dba to seok; 입력   //권한 부여(dba는 관리자)
 ----------------
 DB서버에 관리자 계정으로 접속 진행 => 자기 자신의 계정을 만들기 위해
-oracleDB에 접속을 하려면 instant client 라이브러리가 필요 -> 검색후 2번째 페이지에서 64bit window, Version 21.14.0.0.0 - > basic, sqlplus, jdbc 한 군데에 받아서 압축풀기(학원에서는 oracle_setup)
+oracleDB에 접속을 하려면 instant client 라이브러리가 필요 -> oracle에서 검색후 2번째 페이지에서 64bit window, Version 21.14.0.0.0 - > basic, sqlplus, jdbc 한 군데에 받아서 압축풀기(학원에서는 oracle_setup)
 압축해제한 폴더에 들어가서 sqlplus ID/PW@ip:포트번호/SID; //DBA admin 계정으로 연결하는 과정(로그인)
 -------------------
 파라미터 값 정리
