@@ -52,7 +52,8 @@ select concat('abcd','efg') from dual;
 
 select substr('abcdefg',3,4) from dual;	--얘는 인덱스 1부터 가네?
 
-select instr('hello', 'l', 2) from dual;--인덱스 0부터 세는듯?
+select instr('hello', 'l', 2) from dual;--인덱스 0부터 세는듯? => 아님 파라미터 생략해서 INSTR(s1,s2, positoin, occurence)에 ('hello', 'l', 2, default(1) ) 이 들어간거였음
+--그래서 3번째에 있는 'l'에서 1번 바로 걸려서 3이 출력됨
 
 select lpad('abc', 5, '*') from dual;
 
