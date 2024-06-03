@@ -100,22 +100,64 @@ select LENGTHB('zzzzzzzzz') from dual;
 		
 -------------------------------
 --오늘 날짜 기준 연도 조회( 테이블 헤더에 '연도' / 컬럼에 '2024'년이라고 나오게 작성)
-SELECT CONCAT( TO_CHAR(SYSDATE, 'YYYY') , '연도') AS 연도 FROM DUAL;
+SELECT CONCAT( TO_CHAR(SYSDATE, 'YYYY') , '년') AS 연도 FROM DUAL;
+--수업 답안(이게 훨씬 간단함)
+SELECT TO_CHAR(SYSDATE,'YYYY') || '년' 연도 FROM DUAL;
 
 --오늘 날짜 기준 월 조회( 테이블 헤더에 '월' / 컬럼에 '06'월이라고 나오게 작성)
 SELECT CONCAT( TO_CHAR(SYSDATE, 'MM') , '월') AS 월 FROM DUAL;
+SELECT TO_CHAR(SYSDATE,'YYYY') || '년' 연도 FROM DUAL;
 
 --오늘 날짜 기준 일 조회( 테이블 헤더에 '일' / 컬럼에 '03'일이라고 나오게 작성)
 SELECT CONCAT( TO_CHAR(SYSDATE, 'DD'), '일') AS 일 FROM DUAL;
+SELECT TO_CHAR(SYSDATE,'YYYY') || '년' 연도 FROM DUAL;
 
 --오늘 날짜 기준 시/분 조회(테이블 헤더에 각각 '시' '분'/ 컬럼에 각각 '?시', '?분' 이라고 나오게
 SELECT CONCAT( TO_CHAR(SYSDATE, 'HH'), '시') AS 시 FROM DUAL;
 SELECT CONCAT( TO_CHAR(SYSDATE, 'MI'), '분') AS 분 FROM DUAL;
+--수업 답안
+SELECT TO_CHAR(SYSDATE,'HH') || '시' AS 시 FROM DUAL;
+SELECT TO_CHAR(SYSDATE,'MI') || '분' 분 FROM DUAL;
 
 --지금이 오전인지 오후인지 조회
-SELECT TO_CHAR(SYSDATE,'PM') AS 오전_오후 FROM DUAL;
+SELECT TO_CHAR(SYSDATE,'PM') AS "오전/오후" FROM DUAL;
 
---문자열 2024-06-06 오전 07:23 을 날짜형 데이터 20204.06.06 으로 조회
-SELECT 
+--문자열 2024-06-06 오전 07:23 을 문자형 데이터 20204.06.06 으로 조회
+SELECT TO_CHAR(TO_DATE('2024-06-06 오전 07:23','YYYY-MM-DD PM HH:MI') , 'YYYY-MM-DD ') || 'DONE'  DONE FROM DUAL;
+SELECT TO_CHAR(TO_DATE('2024-06-06 오전 07:23','YYYY-MM-DD PM HH:MI') , 'YYYY-MM-DD ') AS DONE FROM DUAL;
 
 --오늘 날짜 기준 3달 전 마지막 날은 몇월 며칠인지 조회
+SELECT TO_CHAR(LAST_DAY(ADD_MONTHS(SYSDATE, -3)), 'MM-DD') FROM DUAL;
+
+--------------
+/*
+	4. 집계/분석 함수
+	
+	SELECT 의 컬럼명쪽 OR HAVING 뒤쪽으로 붙음
+	-AVG(컬럼명)	: 평균
+	-COUNT(컬럼명): 검색되는 데이터 수
+	-MAX(컬럼명)	: 최대값
+	-MIN(컬럼명)	: 최소값
+	-SUM(컬럼명)	: 총합
+	-RANK(컬럼명)	: 중복 순위만큼 다음 값을 증가시킴(?)
+	EX)1,2,3,3 등이 있는 경우 4등 나올자리에 5가 나옴(3등이 2명이니까)
+	-DENSE_RANK(컬럼명)	: 중복 순위가 존재해도 순차적으로 다음 순위값을 표시함
+	EX)1,2,3,3,4 로 표시함
+ */
+
+------------------
+/*
+	5. NULL 관련 함수
+	현재 제약조건에 NOT NULL로 무조건 데이터를 입력하게 해놨는데
+	NULL : 미확인 값이나 아직 적용되지 않은 값( 0도 아니고, 비어있는 공란도 아님)
+	
+	-NVL함수	: 어떤 값이 NULL값인 경우에만, 임의의 지정된 값으로 대체하는 함수
+	-NVL(값, NULL일때 대체할 값)
+	EX) SELECT NVL(NULL, 'B') FROM DUAL;
+	EX) SELECT NVL('A','B') FROM DUAL; //얘는 A가 입력이니까 그냥 A로 남아있음
+ 	
+ 	-NVL2함수	: NULL의 여부에 따라 지정한 값으로 대치하는 함수
+ 	-NVL2(값, 값이 있을 때 대체값, NULL 일때 대체값)
+ 	EX) SELECT NVL2(NULL,'A','B') FROM DUAL;
+ 	EX) SELECT NVL2('C','A','B') FROM DUAL;
+ */
