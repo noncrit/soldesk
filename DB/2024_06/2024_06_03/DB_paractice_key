@@ -1,0 +1,100 @@
+-- 어떤 웹사이트에서 게시판에 대한 테이블과 이 테이블을 참조하는 댓글 테이블을 만드려고 함--
+-- 게시판 테이블에는 [작성자/게시판 글 내용/작성 시간]
+-- 댓글 테이블에는 [작성자/댓글 내용/작성 시간]
+
+--1. 게시판에 대한 테이블 만들기
+--2. 테이블의 구조 파악해서 댓글 테이블 만들기
+--[조건] 참조되는 테이블 내용이 삭제되면 관련 있는 댓글 내용도 삭제
+
+--3. 게시판 테이블에 값 2개 넣기 / 각 게시글마다 댓글 2개씩 넣기
+--[조건] 날짜 관련한 값은 현재날짜/현재 시간으로 통일
+
+--4. 게시글 1번을 지웠을 때 관련 댓글도 지워지는지 확인
+
+CREATE TABLE BOARD(
+	B_NUM NUMBER(4) PRIMARY KEY,
+	B_WIRTER VARCHAR2(10 CHAR) NOT NULL,
+	B_TXT VARCHAR2(100 CHAR) NOT NULL,
+	B_WHEN DATE NOT NULL
+);
+
+CREATE SEQUENCE BOARD_SEQ;
+
+--게시글 번호랑 댓글 번호를 연결할 순 없다.
+CREATE TABLE BOARD_REPLY(
+	BR_NUM NUMBER(4) PRIMARY KEY,
+	BR_B_NUM NUMBER(4) NOT NULL, --게시글 번호를 참조하는 컬럼
+	BR_OWNER VARCHAR2(10 CHAR) NOT NULL,
+	BR_TXT VARCHAR2(100 CHAR) NOT NULL,
+	BR_WHEN DATE NOT NULL,
+	CONSTRAINT FK_BOARD_REPLY FOREIGN KEY(BR_B_NUM)
+		REFERENCES BOARD(B_NUM)
+		ON DELETE CASCADE
+);
+
+CREATE SEQUENCE BOARD_REPLY_SEQ;
+
+--3. 게시판 테이블에 값 2개 넣기 / 각 게시글마다 댓글 2개씩 넣기
+--[조건] 날짜 관련한 값은 현재날짜/현재 시간으로 통일
+
+INSERT INTO BOARD VALUES(
+	BOARD_SEQ.NEXTVAL,
+	'nobody1',
+	'HI',
+	SYSDATE
+);
+
+INSERT INTO BOARD VALUES(
+	BOARD_SEQ.NEXTVAL,
+	'nobody2',
+	'HI HELLO',
+	SYSDATE
+);
+---------------
+INSERT INTO BOARD_REPLY VALUES(
+	BOARD_REPLY_SEQ.NEXTVAL,
+	1,
+	'NOBODY3',
+	'DA',
+	SYSDATE
+);
+
+INSERT INTO BOARD_REPLY VALUES(
+	BOARD_REPLY_SEQ.NEXTVAL,
+	1,
+	'NOBODY2',
+	'FA',
+	SYSDATE
+);
+
+INSERT INTO BOARD_REPLY VALUES(
+	BOARD_REPLY_SEQ.NEXTVAL,
+	2,
+	'BODY2',
+	'FDFD',
+	SYSDATE
+);
+
+INSERT INTO BOARD_REPLY VALUES(
+	BOARD_REPLY_SEQ.NEXTVAL,
+	2,
+	'NO2',
+	'HELLO HI',
+	SYSDATE
+);
+
+
+SELECT * FROM BOARD;
+SELECT * FROM BOARD_REPLY;
+
+--4. 게시글 1번을 지웠을 때 관련 댓글도 지워지는지 확인
+
+DELETE FROM BOARD WHERE B_NUM=1;
+SELECT * FROM BOARD_REPLY;
+
+SELECT * FROM TAB;
+
+DROP TABLE BOARD CASCADE CONSTRAINT PURGE;
+DROP SEQUENCE BOARD_SEQ;
+DROP TABLE BOARD_REPLY CASCADE CONSTRAINT PURGE;
+DROP SEQUENCE BOARD_REPLY_SEQ;
