@@ -38,51 +38,52 @@ SELECT * FROM BAVERAGE;
 --3. 쿼리문 작성
 --전체 음료 기준 평균가보다 비싼 음료는 몇 종류?
 SELECT COUNT(B_NAME) FROM BAVERAGE WHERE B_PRICE>(
-													SELECT ROUND(AVG(B_PRICE),1) 
-													FROM BAVERAGE
-													);
+						SELECT ROUND(AVG(B_PRICE),1) 
+						FROM BAVERAGE
+						);
 												
 --제일 싼 음료를 파는 카페의 이름은?
 SELECT CAFE_NAME FROM CAFE WHERE CAFE_NAME IN (
-												SELECT B_NAME_OF_CAFE
-												FROM BAVERAGE
-												WHERE B_PRICE IN (
-																	SELECT MIN(B_PRICE) 
-																	FROM BAVERAGE
-																	)	
-												);
+						SELECT B_NAME_OF_CAFE
+						FROM BAVERAGE
+						WHERE B_PRICE IN (
+									SELECT MIN(B_PRICE) 
+									FROM BAVERAGE
+									)	
+						);
 --
 --서울에 있는 카페에서 만드는 음료의 평균가?
-SELECT ROUND(AVG(B_PRICE), 1) FROM BAVERAGE WHERE B_NAME_OF_CAFE IN (SELECT B_NAME_OF_CAFE
-														FROM BAVERAGE
-														WHERE B_NAME_OF_CAFE IN (
-																				SELECT CAFE_NAME 
-																				FROM CAFE
-																				WHERE CAFE_ADDRESS LIKE '%서울%'
-																				)	
-													);
+SELECT ROUND(AVG(B_PRICE), 1) FROM BAVERAGE WHERE B_NAME_OF_CAFE IN (
+									SELECT B_NAME_OF_CAFE
+									FROM BAVERAGE
+									WHERE B_NAME_OF_CAFE IN (
+												SELECT CAFE_NAME 
+												FROM CAFE
+												WHERE CAFE_ADDRESS LIKE '%서울%'
+												)	
+									);
 --좌석이 90석 이상인 카페에서 파는 음료의 이름?	
 SELECT B_NAME FROM BAVERAGE WHERE B_NAME_OF_CAFE IN (
-													SELECT B_NAME_OF_CAFE
-													FROM BAVERAGE
-													WHERE B_NAME_OF_CAFE IN (
-																			SELECT CAFE_NAME 
-																			FROM CAFE
-																			WHERE CAFE_NUM_OF_SEATS >= 90
-																			)	
-													);
+							SELECT B_NAME_OF_CAFE
+							FROM BAVERAGE
+							WHERE B_NAME_OF_CAFE IN (
+										SELECT CAFE_NAME 
+										FROM CAFE
+										WHERE CAFE_NUM_OF_SEATS >= 90
+										)	
+							);
 --전체 음료 기준 평균가 이하인 음료의 이름?
 SELECT B_NAME FROM BAVERAGE WHERE B_PRICE<=  (
-														SELECT ROUND(AVG(B_PRICE),1) 
-														FROM BAVERAGE
-													);	
+						SELECT ROUND(AVG(B_PRICE),1) 
+						FROM BAVERAGE
+						);	
 													
 --가장 비싼 음료를 파는 카페는 어디에 있는지?
 SELECT CAFE_ADDRESS FROM CAFE WHERE CAFE_NAME IN (
-													SELECT B_NAME_OF_CAFE
-													FROM BAVERAGE
-													WHERE B_PRICE IN (
-																			SELECT MAX(B_PRICE) 
-																			FROM BAVERAGE
-																			)	
-													);												
+							SELECT B_NAME_OF_CAFE
+							FROM BAVERAGE
+							WHERE B_PRICE IN (
+									SELECT MAX(B_PRICE) 
+									FROM BAVERAGE
+									)	
+						);												
