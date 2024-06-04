@@ -106,37 +106,37 @@ SELECT * FROM COMPANY_SNACK;
 ------------------
 --직원의 수가 제일 적은 회사에서 만드는 과자 이름, 가격
 SELECT SNACK_MANUFACTURER,SNACK_NAME, SNACK_PRICE FROM JUN3_SNACK WHERE SNACK_MANUFACTURER IN (SELECT COMPANY_NAME 
-																								FROM COMPANY_SNACK 
-																								WHERE COMPANY_WORKERS=(
-																										SELECT MIN(COMPANY_WORKERS) 
-																										FROM COMPANY_SNACK
-																										)
-																		);
+												FROM COMPANY_SNACK 
+												WHERE COMPANY_WORKERS=(
+															SELECT MIN(COMPANY_WORKERS) 
+															FROM COMPANY_SNACK
+															)
+												);
 SELECT MIN(COMPANY_WOKERS) FROM COMPANY_SNACK;
 --제일 비싼 과자를 만든 회사는 어디에 있는지 
 SELECT COMPANY_ADDRESS FROM COMPANY_SNACK WHERE COMPANY_NAME IN (	SELECT SNACK_MANUFACTURER 
-																	FROM JUN3_SNACK 
-																	WHERE SNACK_PRICE=(
-																					SELECT MAX(SNACK_PRICE) 
-																					FROM JUN3_SNACK
-																					)
-																);
+									FROM JUN3_SNACK 
+									WHERE SNACK_PRICE=(
+												SELECT MAX(SNACK_PRICE) 
+												FROM JUN3_SNACK
+											)
+								);
 --최고가, 최저가로 제품을 파는 업체가 2개가 넘을 경우를 대비해서 메인쿼리의 조건은 IN 으로 데이터를 받아야함
 --등호는 단일 대상까지밖에 비교를 못함
 
 --서울에 있는 회사에서 만드는 과자의 평균가
 SELECT min(SNACK_PRICE) FROM JUN3_SNACK WHERE SNACK_MANUFACTURER IN (	SELECT COMPANY_NAME 
-																		FROM COMPANY_SNACK 
-																		WHERE COMPANY_ADDRESS LIKE '%서울%'
-																);
+									FROM COMPANY_SNACK 
+									WHERE COMPANY_ADDRESS LIKE '%서울%'
+								);
 --평균가 이상의 과자를 만드는 회사의 이름, 위치																
 SELECT COMPANY_NAME,COMPANY_ADDRESS FROM COMPANY_SNACK WHERE COMPANY_NAME IN (
-																			SELECT SNACK_MANUFACTURER 
-																			FROM JUN3_SNACK 
-																			WHERE SNACK_PRICE > (
-																								SELECT AVG(SNACK_PRICE) 
-																								FROM JUN3_SNACK
-																								) 
-																			);
+										SELECT SNACK_MANUFACTURER 
+										FROM JUN3_SNACK 
+										WHERE SNACK_PRICE > (
+													SELECT AVG(SNACK_PRICE) 
+													FROM JUN3_SNACK
+													) 
+										);
 																			
 	
