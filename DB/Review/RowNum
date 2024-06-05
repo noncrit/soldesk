@@ -12,7 +12,7 @@
 -- 무조건 1번부터 조회해야함
 -- SELECT 사용시 선언하지 않아도 ROWNUM 이 자동으로 선언됨
 --https://dataonair.or.kr/db-tech-reference/d-lounge/technical-data/?mod=document&uid=235192
---RowNum 최적화 관련해서 매우 좋은글
+--!!!!!RowNum 최적화 관련해서 매우 좋은글!!!!!
 
 --메뉴의 이름을 가나다 순으로 정렬해서 메뉴 전체 정보를 조회
 SELECT ROWNUM, M_NAME,M_PRICE,M_SELLING_FRANCHISE,M_SELLING_LOC,M_OWNER_NUM,M_NUM 
