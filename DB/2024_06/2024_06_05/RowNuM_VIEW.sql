@@ -11,6 +11,7 @@
 -- ORDER BY 보다 값이 먼저 처리됨**
 -- 무조건 1번부터 조회해야함
 -- SELECT 사용시 선언하지 않아도 ROWNUM 이 자동으로 선언됨
+--참고: Top-n processing, pagination
 
 --메뉴의 이름을 가나다 순으로 정렬해서 메뉴 전체 정보를 조회
 SELECT ROWNUM, M_NAME,M_PRICE,M_SELLING_FRANCHISE,M_SELLING_LOC,M_OWNER_NUM,M_NUM 
