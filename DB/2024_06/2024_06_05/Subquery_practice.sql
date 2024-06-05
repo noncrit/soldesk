@@ -83,7 +83,7 @@ WHERE M_SELLING_FRANCHISE IN (	SELECT F_NAME
 								WHERE F_OWNER_NUMBER IN (	SELECT O_NUMBER 
 															FROM F_OWNER 
 															WHERE O_BIRTH IN (	SELECT MAX(O_BIRTH)
-																				FROM F_OWNER )
+																		FROM F_OWNER )
 														)
 						) AND M_SELLING_LOC IN (	SELECT F_ADDRESS 
 													FROM FRANCHISE 
@@ -93,7 +93,7 @@ WHERE M_SELLING_FRANCHISE IN (	SELECT F_NAME
 																		WHERE F_OWNER_NUMBER IN (	SELECT O_NUMBER 
 																									FROM F_OWNER 
 																									WHERE O_BIRTH IN (	SELECT MAX(O_BIRTH)
-																														FROM F_OWNER )
+																												FROM F_OWNER )
 																								)
 																		)
 											);							
