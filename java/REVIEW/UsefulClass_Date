@@ -1,0 +1,13 @@
+https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_24/Useful_Class/DateMain.java
+https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_24/Useful_Class/ExampleMain1.java
+
+/*날짜와 시간
+ *	Date.java -> 1900년대 만들어진 Class
+ *	Y2K에 큰 관심이 없던 시기(Year 2000 problem)
+ *	1900년대는 컴퓨터 용량이 매우 작았음->연도 맨 끝 두자리만 사용
+ *	1970년 이전 컴퓨터들은 속도가 느리고, 장치 자체의 용량도 매우 작았다.
+ *	데이터 양을 줄이기 위해 연도 처리를 할때 4byte(4자리) 대신 2byte(자리)를 할당해 사용했음
+ *	근데? 2000년대가 다가오고 있음
+ *	근데 1900년, 2000년 둘 다 00으로 인식해서 문제가 생김 ->컴퓨터 입장에서는 구분을 못함
+ *	->컴퓨터의 오작동 가능성이 컸음!
+ */
