@@ -1,0 +1,62 @@
+https://github.com/noncrit/soldesk/blob/main/DB/2024_06/2024_06_05/RowNuM_VIEW.sql
+(Top-n processing 최적화 문제에 관한 내용 꼭 복습하기!)
+Franchise 테이블 사용하는 예제
+
+--RowNUM (가상 필드)
+-- SELECT 를 할 때마다 자동으로 부여되는 숫자
+-- *(전체) 와는 같이 사용불가
+-- ORDER BY 보다 값이 먼저 처리됨**
+-- 무조건 1번부터 조회해야함
+-- SELECT 사용시 선언하지 않아도 ROWNUM 이 자동으로 선언됨
+--참고: Top-n processing, pagination
+--https://dataonair.or.kr/db-tech-reference/d-lounge/technical-data/?mod=document&uid=235192
+
+ex)메뉴의 이름을 가나다 순으로 정렬해서 메뉴 전체 정보를 조회
+SELECT ROWNUM, M_NAME,M_PRICE,M_SELLING_FRANCHISE,M_SELLING_LOC,M_OWNER_NUM,M_NUM 
+FROM MENU 
+ORDER BY M_NAME ASC;
+
+--메뉴의 이름을 가나다 순으로 정렬해서 MENU 테이블의 ROWNUM 1~3 까지 전체 정보를 조회
+--이렇게 쓰면 ORDER BY 이전에 ROWNUM 이 들어가버림
+--우리가 원하는 건 이름순으로 정렬 -> 그 다음 ROWNUM 부여 순으로하는 작업이었음
+
+SELECT ROWNUM, M_NAME,M_PRICE,M_SELLING_FRANCHISE,M_SELLING_LOC,M_OWNER_NUM,M_NUM  
+FROM MENU
+WHERE ROWNUM BETWEEN 1 AND 3
+ORDER BY M_NAME ASC;
+
+해결법?
+
+--서브쿼리로 정렬 먼저 해준 다음 로우넘 호출하면 끝
+--Q. 서브쿼리로 부른 로우넘은 그냥 덮어쓰기 처리되나?
+--서브쿼리가 FROM 안에서 사용되는 경우 => InLINE View 라고 함
+///
+--VIEW
+--진짜 테이블이 아닌, 가상의 테이블 (테이블 처럼 취급은 함)
+--사용자에게 접근이 허용된 자료만을 보여주기 위해 사용
+--쿼리문의 형태를 저장하는 형식이라 테이블 구조가 변경되어도 뷰의 구조를 변경하지 않아도 됨 
+///
+
+SELECT ROWNUM, M_NAME,M_PRICE,M_SELLING_FRANCHISE,M_SELLING_LOC,M_OWNER_NUM,M_NUM
+FROM(
+		SELECT ROWNUM, M_NAME,M_PRICE,M_SELLING_FRANCHISE,M_SELLING_LOC,M_OWNER_NUM,M_NUM  
+		FROM MENU
+		ORDER BY M_NAME ASC
+	)
+WHERE ROWNUM BETWEEN 1 AND 3;
+--단, ROWNUM은 무조건 1번 부터 조회해야하기 때문에 1이 범위에서 벗어나는 순간 이렇게는 구현이 안됨
+
+ROWNUM에서 2 이상의 숫자부터 시작하려면 어떻게 해야할까?
+-- 2~4 를 뽑아내보기
+--select 문을 바깥쪽에 한번 더 씌워주면 내부의 rownum이 숫자만 부여해 놓고 효력을 잃어버린다. => 많이 써먹을 예정
+--안쪽 SELECT 과 바깥쪽 SELECT 모두 ROWNUM이 생성되니, 안쪽 ROWNUM의 이름을 지정
+--그리고 바깥쪽에서 바깥쪽 ROWNUM이 아닌, 안쪽에서 이미 생성된 ROWNUM을 참조하는 식으로 가면 1번 이후 번호에서 ROWNUM 사용 가능
+--ROWNUM은 참조할 시기에 생성되기 때문에, 바깥쪽에서 바깥쪽에 해당하는 ROWNUM을 참조하지 않고 안쪽을 참조하면 된다.
+ex)
+SELECT *
+FROM(
+		SELECT ROWNUM AS RN, M_NAME, M_PRICE 
+		FROM MENU
+		ORDER BY M_NAME ASC
+	)
+WHERE RN BETWEEN 3 AND 12;
