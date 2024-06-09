@@ -76,6 +76,7 @@ https://github.com/noncrit/soldesk/blob/main/DB/2024_05/2024_05_31/Constraint.sq
 			constraint PK_example5 primary key(col1, col2) 
 			// 컬럼 2개의 조합으로 PK_example5 라는 primary key 선언
 		);
+	****단, 컬럼 조합으로 primary key 선언이 가능하긴하지만, 따로 번호 컬럼 같이 고유값을 하나 만드는편이 더 간편함***
 		
 	4. Foreign key(외래키)(FK로 줄여씀)
 		- 다른 테이블의 특정 column을 참조하는 키
