@@ -1,4 +1,6 @@
 https://github.com/noncrit/soldesk/blob/main/DB/2024_06/2024_06_04/summary_and_nestedQuery.sql
+https://github.com/noncrit/soldesk/blob/main/DB/2024_06/2024_06_04/practice_cafe.sql
+6/3일 이후 모든 실습 DB들에 서브쿼리 들어가있음
 
 서브 쿼리(SubQuery) : 하나의 쿼리문 안에 또 다른 쿼리가 있는 nested query
 	 	다른 테이블에서 가져온 데이터로 현재 테이블에 있는 정보를 찾거나 가공할 때 사용
