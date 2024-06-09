@@ -63,3 +63,12 @@ ex)
 		
 //Exception 객체 : 자바에 존재하는 모든 Exception을 받을 수 있음(귀찮으면 이거 쓰기)
 catch (Exception e) { 실행내용 }
+
+****
+https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_24/Exception_Handling/Per_gram.java
+****
+//미루기 방식(throws)
+//작업을 수행하다가 Exception이 발생하면 해당 객체를 호출한 쪽에서 해결하라!
+//보통 메인쪽으로 다 밀어버림
+//메인 메소드 말고 다른쪽에서 try-catch 사용하면 월권행위 느낌
+//메인 아닌 메소드에서 throws로 메인쪽으로 넘겨주자
