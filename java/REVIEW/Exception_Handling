@@ -19,14 +19,30 @@ https://github.com/noncrit/soldesk/tree/main/java/2024_05/2024_05_24/Exception_H
 //	개발자의 잘못은 아님
 //	개발자의 입장 => 개발자가 상황을 예측해서 대책은 세워놓자...
 
-	Exception 처리 - try catch
-		//try 안쪽 구문을 먼저 실행, 만일 exception이 발생하면 catch 쪽 블록이 실행됨
-		//이때, catch 쪽 파라미터로 Exception(예외 유형명 변수명)을 받음
-		//try쪽에서 exception 발생 없이 정상적으로 코드 실행이 끝난 경우 catch 블록은 그냥 생략됨
-		//catch 여러 개로 여러 유형의 엑셉션 처리 가능
-		//finally{... } => exception 발생 여부에 상관없이 finally 안쪽 블록은 무조건 실행됨
-		//***finally는 return 보다 실행 우선순위가 높음***
-		//Exception 각각의 경우에 대한것은 알아서 잡아내야함
+//Exception의 종류(대표적인 것만)
+
+//	NullpointerException
+//		어떤 객체가 null값을 참조하고 있는 상황
+
+//	ArrayIndexOutOfBoundException
+//		배열 인덱스 범위를 넘어가는 값을 참조하려 할 때 발생
+
+//	NuberFormatException
+//		문자열(String) 을 => 숫자(int, double)로 변환하는 과정에서,
+//		변환 할 수 없는 문자가 있는 경우 발생함
+//	ex) String s = "a12345";
+//		int i = Interger.parseInt(s);
+//		System.out.println(i+20);
+//		a 때문에 Exception 발생
+
+Exception 처리 - try catch
+//try 안쪽 구문을 먼저 실행, 만일 exception이 발생하면 catch 쪽 블록이 실행됨
+//이때, catch 쪽 파라미터로 Exception(예외 유형명 변수명)을 받음
+//try쪽에서 exception 발생 없이 정상적으로 코드 실행이 끝난 경우 catch 블록은 그냥 생략됨
+//catch 여러 개로 여러 유형의 엑셉션 처리 가능
+//finally{... } => exception 발생 여부에 상관없이 finally 안쪽 블록은 무조건 실행됨
+//***finally는 return 보다 실행 우선순위가 높음***
+//Exception 각각의 경우에 대한것은 알아서 잡아내야함
 
 ex)
     /*
