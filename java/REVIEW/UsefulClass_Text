@@ -1,0 +1,7 @@
+https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_24/Useful_Class/TextMain1.java
+
+substring, startsWith, matches, contains
+
+split, StringTokenizer
+//속도면에서는 토크나이저 쓰는게 낫고, 데이터에 변수가 많으면 split이 유리함
+//split은 특정 문자열 제거후 남은 문자열들을 배열 형태로 저장
