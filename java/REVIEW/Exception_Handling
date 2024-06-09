@@ -1,5 +1,7 @@
 https://github.com/noncrit/soldesk/tree/main/java/2024_05/2024_05_24/Exception_Handling
 
+Runtime exception(Unchecked Exception) VS Compiletime exception(Chekced Exception)
+
 //어떤 프로그램을 실행하게 되었을 때 콘솔창에 경고문 뜨는거 -> 에러/경고문/예외 케이스
 
 //Error
@@ -72,3 +74,4 @@ https://github.com/noncrit/soldesk/blob/main/java/2024_05/2024_05_24/Exception_H
 //보통 메인쪽으로 다 밀어버림
 //메인 메소드 말고 다른쪽에서 try-catch 사용하면 월권행위 느낌
 //메인 아닌 메소드에서 throws로 메인쪽으로 넘겨주자
+//자신을 호출한 메소드쪽에 예외처리를 떠넘기는 방식
