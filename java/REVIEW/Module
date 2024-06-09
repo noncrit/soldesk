@@ -1,0 +1,24 @@
+https://jenkov.com/tutorials/java/modules.html
+
+/*
+A Java module name follows the same naming rules as Java packages. However, 
+you should not use underscores (_) in module names (or package names, class names, method names, variable names etc.) from Java 9 and forward, 
+because Java wants to use underscore as a reserved identifier in the future.
+*/
+
+자바 Module
+-외부에서 재사용 가능한 패키지들을 목록 형태로 정리한 묶음 형태 파일
+
+모듈의 장점
+
+Startup Detection of Missing Modules
+-기존 패키지 import 형식의 실행 루틴에서는 class를 실제로 호출하기 전 까지는 해당 클래스가 실제로 import 되었는지, 아닌지를 판단 할 수가 없음
+즉, 실제 실행 단계까지 가서 해당 class 호출까지 작업이 진행되어야 dependecy가 올바르게 구현되었는지 판단이 가능함
+반면 모듈을 이용하면 JVM이 모듈 내용을 기반으로 dependcy graph check를 수행 할 수 있고, 실행단계 전에 빠진 패키지(모듈)의 판단이 가능해짐
+
+Encapsulation of Internal Packages
+-자바 모듈에서 다른 모듈로 export 될 수 있는 패키지 그렇지 않은 패키지들(Hidden packages, Encapsulated packages)을 선언 할 수 있음
+export되지 않은 패키지는 다른 모듈이 사용 할 수 없음
+즉, 기존 공개적으로 패키지를 import 선언 할 때와는 다르게, 패키지에도 캡슐화 구현이 가능해짐
+
+
