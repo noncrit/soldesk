@@ -13,7 +13,7 @@ select, insert, update, delete 등이 있음 => 줄여서 CRUD 라고 부름 (Cr
 		group by [그룹 대상]
 		having [함수 포함 조건]
 		order by [정렬 대상 asc/desc(오름차순, 내림차순)
-내장함수 실행은 select 바로 뒤쪽에서만 가능한듯?
+	(내장함수 실행은 select 바로 뒤쪽에서만 가능한듯?)
 
 --Where 절 ( 조건식 )
 	--전체 데이터 중 지정한 조건에 맞는 데이터를 찾아주는 문장
@@ -23,5 +23,12 @@ select, insert, update, delete 등이 있음 => 줄여서 CRUD 라고 부름 (Cr
 	-- !=, <>는 표준화를 하려다보니 사용하게됨
 	-- ^=는 다른 DB랑 차별성을 두기 위해 사용함(?!)
 
+
 insert into jun3_snack(snack_number, snack_name, snack_manufacturer,snack_price )
 	values(1, '초코파이', '오리온', 5000);
+
+--컬럼의 순서를 다르게 넣어보기? ->파라미터 타입, 이름만 지켜주면 멀쩡히 들어감
+insert into jun3_snack(snack_name, snack_number, snack_price,snack_manufacturer)
+	values('새콤달콤', 3, 5000, '롯데');
+
+--컬럼에 값을 안넣은 경우 > not null 걸려있으면 에러 발생( not null 제약이 없는 경우 null값으로 들어감)
