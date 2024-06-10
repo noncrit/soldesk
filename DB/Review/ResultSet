@@ -1,0 +1,24 @@
+ResultSet
+-DB에서 다루는 자료를 처리하기 위한 객체
+-DB테이블과 마찬가지로 Row,Column 개념이 구현되어있음
+-Cursor를 이용해 ResultSet 내부의 데이터를 참조
+-Cursor는 최초 상태에서는 참조 위치가 없음(커서 위치를 한번 옮겨줘야 첫 데이터를 참조함)
+-단, Forward only 방식이라 커서를 한칸 씩 뒤로 옮긴다거나 할 수 는 없음(처음 위치로 초기화는 가능함)
+-데이터 입/출력은 getter/setter 방식
+-DB에서 select 문 다룰때와 마찬가지로, Column 이름이나 Column index number 기반으로 데이터에 접근이 가능함
+
+
+ResultSet 동작 구조 헷갈린 부분 정리
+---------------------
+con = dbconnection(con);
+stmt = conn.createStatement();
+
+rs = stmt.executeQuery(MyQuery.toString());
+rs.setFetchSize(60);
+rs.next();
+---------------------
+  기존에는 executeQuery 객체를 rs가 받아온 시점에서 이미 DB에서 데이터를 받아왔다고 이해하고 있었다...
+  그런데 위의 코드나 다른 사람들이 쓴 코드를 보면 executeQuery 이후에 setFetchSize같은 데이터 전송, 혹은 포맷을 지정하는 코드가 들어가있는데
+  rs가 이미 DB 데이터를 넘겨받은 이후에 전송 속도, 포맷을 지정한다는게 말이 안되는 것 같아서 실행 흐름을 다시 찾아보니
+  rs.next()에서 ResultSet이 참조하는 커서 위치를 지정한 후에야 실제 DB에서 데이터가 넘어오는 식으로 구현이 되어있다는 것을 알게되었다.
+  (초기 ResultSet 선언시에는 Cursor가 참조하는 데이터가 없음...)
