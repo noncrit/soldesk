@@ -7,9 +7,8 @@
     <img src="C:\Users\sdedu\Desktop\eclipse_web\Jun11_1_HTML\src\main\webapp\img\cat.jpg">
 
   상대 경로 방식 : 현재 작업중인 디렉토리를 기준으로 경로 표현
-		로컬에서만 유효한 경로이기에 외부에서는 유효하지 않음...
-		.. : 한단계 위의 경로
-		ex)
+.. : 한단계 위의 경로
+ex)
     <img src="../cat2.jfif">
 -->
 
