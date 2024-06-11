@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	.origin{
+		width: 20%
+	}
+	.reverseX{
+		  width: 20%;
+          transform:rotate(90deg);
+          -moz-transform: scaleX(-1); 
+          -o-transform: scaleX(-1); 
+          -webkit-transform: scaleX(-1); 
+          transform: scaleX(-1);   
+          filter: FlipH;
+          -ms-filter: "FlipH";
+	}
+
+
+</style>
+</head>
+<body>
+	<!--
+		절대 경로 방식 : 시작 위치부터 다 명시하는 방식) 
+		로컬에서만 유효한 경로이기에 외부에서는 유효하지 않음...
+	-->
+	<img src="C:\Users\sdedu\Desktop\eclipse_web\Jun11_1_HTML\src\main\webapp\img\cat.jpg">
+	<hr>
+	
+	<!--
+		상대 경로 방식 : 현재 작업중인 디렉토리를 기준으로 경로 표현
+		로컬에서만 유효한 경로이기에 외부에서는 유효하지 않음...
+		.. : 한단계 위의 경로
+		** 한글 파일명 가급적 사용 X **
+	-->
+	<img src="../cat2.jfif">
+	<hr>
+	
+	<img  src="cat.jfif" class="origin">
+	<img  src="cat.jfif" class="reverseX">
+	<img  src="cat.jfif" class="origin">
+	<img  src="cat.jfif" class="reverseX">
+	<hr>
+	<!--비디오는 재생 버튼까지 있어야 돌아감 controls 추가  -->
+	<video src="../mp4.mp4" controls="controls"></video>
+	<hr>
+	
+	<!--pdf 파일 불러오기  -->
+	<!--embed : 음악,영상,문서 등의 외부 컨텐츠를 포함
+		최신 브라우저에서는 embed 보안 이슈로 지원을 안하는  추세
+		음악은 <audio src="" controls="controls autoplay="autoplay"></audio> 요런식
+		(autoplay는 지원이 중단되었음)
+	-->
+	<embed src="../pdf.pdf" width="600px" height="600px">
+	<!--사이즈 조절 : 가로나 세로 둘 중 하나만 조정하면 원본 비율에 맞게 알아서 조정해줌
+		단위는 px(픽셀)이 디폴트, %도 사용가능
+		크기 조절 안하는 편이 좋음 => 픽셀 깨짐 / 보정 도구 있긴 할 듯	  
+	-->
+	<hr>
+</body>
+</html>
