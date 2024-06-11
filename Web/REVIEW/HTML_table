@@ -1,0 +1,19 @@
+실습 코드는 6월 11일 수업 참고
+
+<!--
+		<table>
+			기본 : <tr>, <th>, <td>
+			<tr> : Table Row, 테이블의 행을 표현함
+			<td> : Table Data, 테이블의 들어가는 데이터 공간, 셀을 의미함
+			즉, 하나의 <table> 안에 <tr> 태그로 행을 표현하고,
+			그 안에 <td> 태그를 이용해서 데이터를 표현
+			<th> : Table Header, 테이블의 타이틀을 표현함
+			
+			Attribute : border, width, height (table)
+						align, valign (정렬방법 td, th)
+						colspan, rowspan ( 칸 합병(= Td 합병) )
+	-->
+
+<!-- 병합 할 때 병합 후 남은 셀을 지워버리면 깔끔하게 테이블 다듬기 가능(11일 6번파일 2번 예제)  -->
+
+<!-- 테이블 안쪽 셀에도 테이블을 다시 선언 할 수 있음 -->
