@@ -138,6 +138,16 @@ ex)
 	</fieldset>
 ------------------------------------
 
+<!--
+	anchor tag
+	<a> 
+	: 다른 페이지나 or 같은 페이지의 특정 위치, 파일과 같은 다른 URL로 연결할 수 있는 HyperLink
+	: 문법적으로 이동할 주소값을 나타내는 'href'와 함께 사용함
+	href : Hyper Reference, 웹문서 or 주소값을 말함
+	ex)
+	<a href="https://www.naver.com">네이버</a>
+-->
+
 
 
 <!--  
