@@ -1,0 +1,202 @@
+@charset "UTF-8";
+@font-face {
+	src:url("A_MilkBread.TTF");
+	font-family: "MilkBread"
+}
+
+@font-face {
+	src:url("A_PosterB.TTF");
+	font-family: "PosterB"
+}
+::-webkit-scrollbar{
+	display : none;
+}
+
+body{
+	font-family: "MilkBread";
+	/* html 여백 없애기  */
+	margin: 0px; 	/* 바깥쪽 여백 */
+	padding: 0px; 	/*  안쪽 여백 */
+}
+
+#siteTitleArea{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	border-spacing: 0px; /*TD들간의 간격을 0px로 조정  */
+}
+
+#siteMenuArea{
+	background-color: #FFFF2290; /*RGB[투명도]  */
+	font-size: 30pt;
+
+}
+
+#siteMenuArea table{
+	width:100%;
+}
+
+#siteMenuArea td{
+	width: 25%;
+	text-align:"center";
+	
+}
+
+
+#siteMenuArea a{
+	text-decoration: none; /* 밑줄제거 */
+	color: black;
+	font-weight:500;
+	
+	/* 애니메이션 효과 */
+	transition: all 0.5s ease-in; /* 속성명 시간 (ease-in/ease-out)  */
+}
+
+#siteMenuArea a:hover{
+	font-size: 40pt;
+	text-shadow: yellow 0px 0px 10px;
+	text-decoration: underline;
+}
+
+#siteMenuArea a:active{
+	color: blue;
+}
+
+
+#siteTitle{
+	background-color: #0099FF55;
+	font-size:30pt;
+	color:black;
+	text-shadow:teal 3px 5px 5px;
+	width: 1000px;
+}
+
+
+#siteContentArea{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto; 
+	/* 마진 레프트,라이트 둘 다 쓰면 가운데 정렬*/
+	margin-top: 100px;
+}
+
+#Vd{
+	max-width:50%;
+	/* 이미지같은 경우는 픽셀 깨짐현상 때문에 사이즈 조절을 안하는 편이 좋음  */
+	/* 작은 그림 늘리면 픽셀이 깨져서 나온다... */
+	
+	box-shadow: black 5px 5px 10px;
+	/*비디오 객체에 그림자 주기  */
+}
+
+#ContentTable{
+	 border:0;
+	 border-style:solid;
+	 border-color:#F2F2F2; 
+	 font-family:"PosterB";
+	 width :80%;
+	 height:100px;
+	 background-color: #F1F1F7;
+	 border-spacing:0px;
+	 text-align: center;
+	 /* table-layout: fixed; */
+}
+
+#ContentTable .dataTr{
+
+	color:pink;
+	cursor:pointer;
+	
+	
+}
+#ContentTable .dataTr:hover{
+
+	background-color: #FFFFF4;
+	
+}
+
+#ContentTable th{
+
+	height:60px;
+	font-size:20pt;
+	
+}
+
+#ContentTable a{
+	text-decoration: none;
+	
+} 
+
+#ContentTable a:hover{
+	font-size: 20pt;
+	text-shadow: #00ffff 0px 0px 10px;
+	text-decoration: underline;
+}
+
+#ContentTable td{
+	text-align:center;
+	width:33%;
+	border-bottom: white solid 2px;
+	
+}
+
+#num{
+	color: #0f0f0f;
+	font-size: 19pt;
+	font-weight: lighter;
+	font-family: "MilkBread";
+}
+
+#title{
+	color: #0f0f0f;
+	font-size: 19pt;
+	font-weight: lighter;
+	font-family: "MilkBread";
+	
+}
+
+#date{
+	color: #0f0f0f;
+	font-size: 19pt;
+	font-weight: lighter;
+}
+
+<!-- -->
+
+.GuestTable{
+	border:silver solid 3px;
+	border-radius: 10px;
+	box-shadow: navy 0px 0px 5px;
+	font-size: 20pt;
+	margin: 10px;
+	margin-left:20px;
+	margin-right:20px;
+	width:70%;
+	height:70%;
+	float:left;
+}
+
+.GuestImg_pic{
+	max-width: 200px;
+	max-height: 300px;
+	box-shadow: navy 0px 0px 5px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+}
+
+.GuestBookContent{
+	width:45%;
+	
+}
+
+.GuestBookDate{
+	width:20%;
+	text-align:right;
+	vertical-align:bottom;
+	font-size:10pt;
+}
+
+
+
