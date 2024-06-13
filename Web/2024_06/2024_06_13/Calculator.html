@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<!--
+		HTML 요청 보내는 방식
+		1. a 태그 이용한 get 방식
+		2. form을 이용한 (get,post 방식)
+		3. JS를 이용한 요청방식(일반적으로 get 방식)
+	-->
+	
+	<!--  
+		a 태그를 활용해서 Calculator라는 Servlet을 요청할 예정
+		정수 2개를 담아서 요청
+		정수 2개의 사칙연산 결과를 테이블에 담아서 출력
+	-->
+	
+	<a href="Calculator?x=10&y=5">10, 5 계산하기</a>
+	<!--이게 결국은 get방식의 요청임  -->
+	
+	
+	<!-- 입력을 직접 받아서 사칙연산 결과를 출력하기  -->
+	
+	<!--  
+		<form>
+		form 내부의 button을 누르면 action 자리에 쓴 쪽으로 요청을 보내줌(기본은 get 방식)
+		
+		form 내부에 있는 input들의 속성값으로 name을 사용 => 요청 파라미터를 지정할 때 사용함
+		input들 안에 쓴 내용을 값으로 보내주는 역할
+		
+		input 입력시 
+			tab : 다음 input으로 알아서 넘어감
+			enter: 버튼을 누른걸로 취급	
+	-->
+	
+	<hr>
+	
+	<form action="Calculator">
+		 x : <input name="x"> <br>
+		 y : <input name="y"> <p>
+		 <button>계산</button>
+	</form>
+
+</body>
+</html>
