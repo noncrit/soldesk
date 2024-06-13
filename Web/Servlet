@@ -1,3 +1,7 @@
 eclipse 에서 java resource 폴더 / src/main/java 에 경로 잡아줘야함
 
 HTML get vs post
+
+tomcat encoding 변경
+servers 폴더 server.xml 파일에 63번째 라인에 URIEncoding="UTF-8" 추가
+( Connector[URIEncoding="UTF-8"] connectionTimeout="20000" ...)
