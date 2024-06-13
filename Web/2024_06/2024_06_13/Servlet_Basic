@@ -1,0 +1,58 @@
+package com.seok.jun131.main;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/*	main 메소드가 없음?!
+	main은 tomcat의 내부에서 클래스를 만들고, main까지 실행함
+
+	Servlet(Server + Application)
+	
+*/
+
+/*	@XXX : Annotation
+	원래는 직접 다 구현했어야 할 기능들을 자동으로 처리해주겠다는 선언
+	LearnServlet을 Tomcat에 등록하겠다는 내용
+	지우면 실행안됨!!
+*/
+@WebServlet("/LearnServlet")
+public class LearnServlet extends HttpServlet {
+	//HttpServlet 클래스에 있는 기능(요청받으면 응답하기)을 상속 받음
+	//뭔가를 더 추가 할 수도 있음
+	
+	//작업하면서 버전 처리하라고 적어놓은 부분(지워도 상관없음)
+	private static final long serialVersionUID = 1L;
+	
+	//생성자 부분 - LearnServlet 객체를 만드는것은 tomcat이 담당함
+	//지워도 무방한 부분
+    public LearnServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+    
+    //	event-driven-programming (이벤트 기반 프로그래밍)
+    //	현재 Tomcat이 실행중 => LearnServlet을 실행
+    //		=> Tomcat이 LearnServlet이라는 객체를 만들어서 무한 루프를 돌고있음
+    //		=> 어떤 이벤트가 발생하면 (doGet, doPost 등등) 그 이벤트를 처리하고 다시 루프로 돌아옴
+    
+    
+    //	***아래에 위치한 메소드 부분이 이벤트에 해당함 + 제일 핵심 부분**
+    //	루프를 돌다가 클라이언트가 Servlet쪽에 Get 요청을 보내면
+    //	Tomcat이 doGet 메소드를 자동으로 호출
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	//	루프를 도는중 클라이언트가 Servlet으로 POST를 요청하면
+	//	Tomcat이 doPost 메소드를 자동으로 호출
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
