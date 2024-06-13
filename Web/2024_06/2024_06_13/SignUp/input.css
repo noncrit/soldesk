@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@font-face {
+	src:url("MilkBread.ttf");
+	font-family: "MilkBread"
+}
+
+body{
+	font-family: "MilkBread";
+	/* html 여백 없애기  */
+	font-weight:lighter;	
+}
+#wrap{
+	max-width: 1600px;/* 최대 가로폭 지정 */
+	width:1000px;/* 가로폭 지정 */
+	margin:0 auto;/* 상하 여백 0, 좌우 여백 균등하게 */
+	color:#ff0080;
+	font-weight: lighter;
+}
+
+#wrap:placeholder{
+	color:white;	
+
+}
+
+.form_input{
+	outline:white;
+	border:medium;
+	background-color:transparent;
+	color: #000000;
+	font-weight: bold;	
+}
+
+
+.form_input:focus{
+	background-color: #ffffff;
+	border-radius: 7px;
+}
+
+#data {
+	width:300px;
+	height:200px;
+	border-style: double;
+	background-image:url('predator.jpg');
+	background-size:cover;
+	border-radius: 10px;
+	background-color:transparent;
+	
+}
+#submit{
+	border:white;
+	background-color: transparent;
+	color:white;
+	font-size:15pt;
+	font-family:MilkBread;
+	cursor:pointer;
+}
+
+
+#submit:hover{
+	color: red;
+	background-color: white;
+	transition: all 1s;
+	transform:rotate(1440deg);
+	text-decoration: underline;
+}
+
+#reset{
+	border:white;
+	background-color: transparent;
+	color:white;
+	font-size:15pt;
+	font-family:MilkBread;
+	cursor:pointer;
+}
+
+#reset:hover{
+	border-color: red;
+	color: red;
+	background-color: white;
+	border-radius: 30%;
+	transition: all 1s;
+	transform:scale(1.5);
+}
+
+
+
+.select{
+	border:none;
+	background-color: transparent;
+	outline:none;
+	padding-left: 20px;
+}
+
+.select text{
+	color:white;
+}
+
+.IND{
+	align-self: auto;
+	resize:none;
+	background-color: none;
+	border: white solid 3px;
+	border-radius: 10px;
+	width: 90%;
+	height: 70%;
+	outline: none;	
+	font-family:"MilkBread";
+}
