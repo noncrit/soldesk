@@ -1,0 +1,102 @@
+package com.seok.jun131.main;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/SeokServlet")
+public class SeokServlet extends HttpServlet {
+	
+	//	GET 방식의 요청(Default)을 받으면 doGet 메소드로 처리함
+	//	주소를 알고있으면 직접 타이핑해서 접속하는 방식
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//	랜선에 붙어있는 응답용 빨대가 하나 필요함
+//		PrintWriter out = response.getWriter();
+//		out.print("<html>");
+//		out.print("<head><title>Hello!</title><meta charset='UTF-8'></head>");
+//		out.print("<body>");
+//		for (int i = 0; i < 5; i++) {
+//			out.print("<marquee>HELLO ! </marquee>");
+//		}
+//		out.print("</body>");
+//		out.print("</html>");
+		
+		//	실행했을때 주소창에 요청파라미터 lang에 대한 값으로
+		//	korean을 입력하면 '네'
+		//	english를 입력하면 'yes', 그 외에는 '몰라'
+		//	이거를 h1 태그로 출력
+		
+		//	클라이언트에게 서버측에서 어떤 방식으로 인코딩을 했는지 항상 알려줘야함!!!!!(항상)(먼저 선언해놓기)
+		response.setCharacterEncoding("UTF-8");
+		
+		//	?변수명=값&변수명=값&..... 이게 요청 파라미터 부분
+		
+		//lang 요청 파라미터의 값을 String language에 담을 예정
+		String language = request.getParameter("lang");
+		PrintWriter out = response.getWriter();
+		
+		out.print("<html>");
+		out.print("<head><title>Hello!</title><meta charset='UTF-8'></head>");
+		out.print("<body>");
+		
+		out.print("<h1>");
+		if(language.equals("korean")) {
+			out.print("네");
+		}
+		else if (language.equals("english")) {
+			out.print("yes");
+		}
+		else {
+			out.print("몰라");
+		}
+		out.print("</h1>");
+		
+		out.print("</body>");
+		out.print("</html>");
+		//이렇게 해놓고 톰캣 주소창에 ?lang=korean 이런식으로 직접 입력하는 방식이었음...
+		
+//		out.print("<html>");
+//		out.print("<head><title>Prac1</title><meta charset='UTF-8'></head>");
+//		out.print("<body>");
+//		
+//		out.print("<form method='get'>");
+//		out.print("</form>");	
+//		out.print("<label user_input='user_input'>유저 입력</label>");
+//		out.print("<input type='text' name='user_input' id='user_input'><br>");
+//		out.print("<input type='submit' value='제출'><br>	");
+//			
+//		String user_input = request.getParameter("user_input");
+//		response.setContentType("text/html");
+//		
+//		if(user_input.equals("korean")) {
+//			out.println("<h1>네</h1><br>");
+//		}
+//		else if (user_input.equals("english")) {
+//			out.println("<h1>yes</h1><br>");
+//		}
+//		else {
+//			out.println("<h1>몰라</h1><br>");
+//		}
+//		
+//		out.print("</body>");
+//		out.print("</html>");
+		
+		
+	}	
+
+	//	Post 방식의 요청을 받으면 doPost 메소드를 호출함
+	//	프로그램을 통해서만 요청이 가능(사이트 로그인, 회원가입 등등)
+	//	GET 방식에서는 요청 파라미터가 공개되어 있음
+	//	보안이 필요한 기능에서는 Post 방식을 활용함
+	//	Tomcat의 내부를 통해 주고받는 방식으로 보안성 유지
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}
