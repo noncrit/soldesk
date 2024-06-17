@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type = "text/javascript">
+	/* function kkkk(){
+		alert('ㅋㅋㅋㅋㅋㅋ');
+	} */
+	let coin=0;
+	
+	function coin_in(x){
+		coin+=x;
+		alert(`${x}원 투입`);
+	}
+	/* function coin_500(){
+		coin+=500;
+		alert('500원 투입');
+	}
+	function coin_1000(){
+		coin+=1000;
+		alert('1000원 투입');
+	} */
+	function coin_decide(){
+		let input=coin;
+		//왜 스위치로는 작동이 안될까? - case쪽에는 상수만 올 수 있음...
+		/* switch(input){
+			case input<500 :
+				alert('선택 가능한 음료수 없음!');
+				break;	
+			case input>=3000 :
+				alert("콜라 사이다 닥터 페퍼 맥주 소주 선택 가능");
+				break;
+			case input>=2000 :
+				alert("콜라 사이다 닥터 페퍼 맥주 선택 가능");
+				break;
+			case input>=1000 :
+				alert("콜라 사이다 닥터 페퍼 선택 가능");
+				break;
+			case input>=700 :
+				alert("콜라 사이다 선택 가능");
+				break;
+			case input>=500 :
+				alert("콜라 선택 가능");
+				break;		
+		}  */
+		
+		if(input<500){
+			alert('선택 가능한 음료수 없음!');
+		}
+		else if(input>=3000){
+			alert("콜라	 사이다 닥터 페퍼 맥주 소주 선택 가능");
+		}
+		else if(input>=2000){
+			alert("콜라 사이다 닥터 페퍼 맥주 선택 가능");
+		}
+		else if(input>=1000){
+			alert("콜라 사이다 닥터 페퍼 선택 가능");
+		}
+		else if(input>=700){
+			alert("콜라 사이다 선택 가능");
+		}
+		else if(input>=500){
+			alert("콜라 선택 가능");
+		}
+		
+		getDrink();
+	}
+	
+	function getDrink(){
+		a:while(true){
+			if(coin<500){
+				break a;
+			}
+			
+			let drink=prompt("뽑을 음료를 골라주세요.", '멈춰');
+			switch (drink) {
+				case "콜라":
+					if(coin<500){
+					alert('잔액 부족');
+					break;
+				}
+				alert(`${drink}를 선택하셨습니다. ${coin}에서 500원을 차감합니다.`);
+				coin-=500;
+				console.log("현재 잔액 : "+coin+"원");
+				break;
+				
+				case "사이다":
+					if(coin<700){
+					alert('잔액 부족');
+					break;
+				}
+				alert(`${drink}를 선택하셨습니다. ${coin}에서 700원을 차감합니다.`);
+				coin-=700;
+				console.log("현재 잔액 : "+coin+"원");
+				break;
+				
+				case "닥터 페퍼":
+					if(coin<1000){
+					alert('잔액 부족');
+					break;
+				}
+				alert(`${drink}를 선택하셨습니다. ${coin}에서 1000원을 차감합니다.`);
+				coin-=1000;
+				console.log("현재 잔액 : "+coin+"원");
+				break;
+				
+				case "맥주":
+					if(coin<2000){
+					alert('잔액 부족');
+					break;
+				}
+				alert(`${drink}를 선택하셨습니다. ${coin}에서 2000원을 차감합니다.`);
+				coin-=2000;
+				console.log("현재 잔액 : "+coin+"원");
+				break;
+				
+				case "소주":
+					if(coin<3000){
+					alert('잔액 부족');
+					break;
+				}
+				alert(`${drink}를 선택하셨습니다. ${coin}에서 3000원을 차감합니다.`);
+				coin-=3000;
+				console.log("현재 잔액 : "+coin+"원");
+				break;
+				
+				case "멈춰":
+					alert("잠시 멈춤");
+					break a;
+				
+				default:
+					alert("품목 없음, 다시 입력해주세요.");
+					break;
+			}	
+		}
+	}
+	
+	function remain(){
+		console.log(coin);	
+		
+	}
+	function refund(){
+		if(coin==0){
+			alert('잔액이 0원입니다.');
+			return;
+		}
+		let refundMoney = confirm(coin + "원을 환불하시겠습니까?")
+		if(refundMoney){
+			alert(`${coin}원이 환불되었습니다.`);
+			coin=0;
+			console.log("현재 잔액 : "+coin+"원");
+		}
+	}
+	
+	// 1. 버튼 3개를 추가해서 각각 '100원' '500원' '1000원' 텍스트 넣기
+	// 2. 각 버튼에 기능 넣기
+	// 3. 	500원 미만이면 '선택 할 수 있는 음료수가 없음!'
+	// 		500원 이상이면 '콜라 선택 가능'
+	// 		700원 이상이면 '콜라, 사이다 선택 가능'
+	// 		1000원 이상이면 '콜라, 사이다, 닥터페퍼 선택 가능'
+	// 		2000원 이상이면 '콜라, 사이다, 닥터페퍼, 맥주 선택 가능'
+	// 		3000원 이상이면 '콜라, 사이다, 닥터페퍼, 맥주, 소주 선택 가능'
+	//		=>alert 으로 출력
+	// 4. 돈 쌓이는건 log로 확인
+</script>
+</head>
+<body>
+	<div align="center">
+	<!--  <button onclick="kkkk();">ㅋㅋㅋㅋ</button>-->
+	<button onclick="coin_in(100);" class='coin_button' align="center">100원 투입</button>
+	<button onclick="coin_in(500);" class='coin_button' align="center">500원 투입</button>
+	<button onclick="coin_in(1000);" class='coin_button' align="center">1000원 투입</button>
+	<button onclick="remain();" class='coin_button' align="center">잔액 확인</button>
+	<button onclick="coin_decide();" align="center" class="decide">음료 뽑기</button>
+	<button onclick="refund();" align="center" class="decide">잔액 반환</button>
+	</div>
+	<br>
+	<div align="center">
+	
+	</div>
+	<div><!-- 이모지는 윈도우 + 세미콜론 -->
+		<div align="center">*자 판 기*</div>
+		<div align="center">
+			<div>🧊 500원</div>
+			<div>사이다 : 700원</div>
+			<div>닥터페퍼 : 1000원</div>
+			<div>맥주 : 2000원</div>
+			<div>소주 : 3000원</div>
+		</div>
+	</div>
+	<hr>
+</body>
+</html>

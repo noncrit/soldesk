@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//프롬프트로 행의 갯수, 열의 갯수를 입력
+	//입력한 행x열 만큼의 테이블을 만들어지고
+	//각 tb들에 숫자가 카운팅되어서 값이 나오도록
+	//출력은 document.write로 진행
+	function makeTable(){
+		let row = prompt("행의 갯수를 입력해주세요",1);
+		let column = prompt("열의 갯수를 입력해주세요",1);	
+		
+		document.write("<style type='text/css'>table{border:pink solid 3px;}</style>")
+		
+		let k=1;
+		document.write('<table border=1>테이블');
+		for(var i=0;i<row;i++){
+			document.write("<tr height='50px'>");
+			
+			for(var j=0;j<column;j++){
+				document.write('<td width="50px" align="center">'+k);
+				document.write('</td>');
+				k++;		
+			}
+			document.write('</tr>');
+		}
+		document.write('</table>');
+	}
+	//document.write()의 특징 : 웹 페이지가 실행되면, 웹페이지에 가장 먼저 데이터를 출력함 
+	//=>대부분 디버깅, 테스팅 용도로 사용함
+	//중간에 document.write()가 실행되면, 웹 페이지 내에 먼저 로딩된 모든 데이터를 지우고 자신의 데이터를 출력함
+
+</script>
+</head>
+<body>
+	<h1>자동 테이블 생성기 + 자동 숫자 카운트</h1>
+	<button onclick="makeTable();">테이블 생성</button>
+</body>
+</html>
