@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/BMIcss.css">
+
+<script type="text/javascript" src="js/KimValidChecker.js"></script>
+<script type="text/javascript" src="js/Jun18_Check.js"></script>
+
+</head>
+<body>
+	<!--
+		form + table 활용
+		BMI 검사 페이지
+		bmi : 몸무게 / (키*키) 키는 m 단위
+		18.5 미만 = 저체중
+		18.5 이상 = 정상
+		25 이상 = 과체중
+		30 이상 = 경도비만
+		35이상 = 중증도 비만
+		40이상 = 고도비만
+		
+		이름, 키(cm), 몸무게(kg), 사진을 입력받음 
+		=> 버튼을 누르면 유효성 검사 실시 => 모든 데이터가 유효하면 
+		=> 이름, 키, 몸무게, bmi수치, 결과, 사진을 Servlet으로 출력할 예정
+		+html(css로 꾸미기) servlet은 안건드림
+	-->
+	<wrap>
+	<div>
+		<form action="BMIOutput" method="post" name="form_out" 
+		enctype="multipart/form-data" onsubmit="return bmiCheck();">
+		<table id="outer_table" border="1">
+		<tr>
+			<td>
+			이름: <input name="name" id="name" maxlength="20" autofocus="autofocus"></input><p>
+			키: <input name="height" id="height" maxlength="3"><p>
+			몸무게: <input name="weight" id="weight"><p>
+			사진: <input type="file" name="image"><p>
+			<button id="submit">전송</button>
+			</td>
+		</tr>
+		</table>
+		</form>
+	</div>
+	</wrap>
+	
+</body>
+</html>
