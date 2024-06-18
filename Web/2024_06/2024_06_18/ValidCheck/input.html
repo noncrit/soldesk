@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function goHahaha(){
+		
+		//document: 현재 HTML 문서를 의미함
+		let iiInput=document.getElementById("ii"); // id가 ii인 것
+		//document.getElementByClass("ii"); //클래스 기반 접근
+		//document.getElementByTagName("input"); //특정 태그 기반 접근
+		
+		let iiInputVal=iiInput.value;	//입력한 내용이 나오게
+		//alert(iiInputVal);
+		
+		//요청 보내기
+		location.href = "ㅋㅋㅋ?ii="+iiInputVal;		
+	}
+
+</script>
+</head>
+<body>
+
+	<!--
+		버튼을 더블클릭하면 ㅋㅋㅋ?ii=XXX로 GET 방식 요청을 하고싶다.
+		
+		주소 입력으로 데이터 넘기기 -> GET 방식
+		<a> 태그				-> GET 방식
+		<form> + <button>	-> GET/POST 둘 다 가능
+		JavaScript			-> GET 
+	-->
+	<input id="ii">
+	<button ondblclick="goHahaha();">확인</button>
+	
+	
+</body>
+</html>
