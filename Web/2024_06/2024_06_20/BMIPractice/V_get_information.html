@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="get_information.css">
+<script type="text/javascript" src="KimValidChecker.js"></script>
+<script type="text/javascript"src="M_valid.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- enctype="multipart/form-data" -->
+	<h1>Get Information</h1>
+	<form action="HomeController" method="post" name ="info" id="info"  enctype="multipart/form-data"
+	onsubmit="return check();">
+	<table border="1" id="input_table">
+	<tr>
+		<td>
+		이름 : <input name="name"><p>
+		몸무게 : <input name="weight"><p>
+		키 : <input name="height"><p>
+		사진 : <input type="file" name="image"><p>
+		<button type="submit" id="submit">전송</button>
+		</td>
+	</tr>	
+	</table>
+	</form>
+</div>
+</body>
+</html>

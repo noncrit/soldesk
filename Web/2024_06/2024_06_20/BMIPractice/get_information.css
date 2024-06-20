@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@font-face {
+	src:url("MilkBread.ttf");
+	font-family: "MilkBread"
+}
+
+body{
+	font-family: "MilkBread";
+	/* html 여백 없애기  */
+	font-weight:lighter;	
+}
+
+#wrap{
+	max-width: 1600px;/* 최대 가로폭 지정 */
+	width:1000px;/* 가로폭 지정 */
+	margin:0 auto;/* 상하 여백 0, 좌우 여백 균등하게 */
+	color:#ff0080;
+	font-weight: lighter;
+}
+
+#wrap:placeholder{
+	color:white;	
+
+}
+
+#input_table{
+	outline:black;
+	border:medium;
+	background-color:transparent;
+	color: #000000;
+	font-weight: bold;	
+}
+
+
+#input_table:focus{
+	background-color: #ffffff;
+	border-radius: 7px;
+}
+
+#submit{
+	border:white;
+	background-color: #75db5b;
+	border-radius:10px;
+	color:white;
+	font-size:15pt;
+	font-family:MilkBread;
+	cursor:pointer;
+}
+
+
+#submit:hover{
+	color: red;
+	background-color: white;
+	transition: all 1s;
+	transform:rotate(1440deg);
+	text-decoration: underline;
+}

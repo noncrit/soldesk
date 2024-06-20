@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@font-face {
+	src:url("MilkBread.ttf");
+	font-family: "MilkBread"
+}
+
+body{
+	font-family: "MilkBread";
+	/* html 여백 없애기  */
+	font-weight:lighter;	
+}
+
+#wrap{
+	max-width: 1600px;/* 최대 가로폭 지정 */
+	width:1000px;/* 가로폭 지정 */
+	margin:0 auto;/* 상하 여백 0, 좌우 여백 균등하게 */
+	color:#ff0080;
+	font-weight: lighter;
+}
+
+#wrap:placeholder{
+	color:white;	
+}
+
+#result_table{
+	color:black;
+	border-color: black;
+	border-style: solid;
+	
+}
