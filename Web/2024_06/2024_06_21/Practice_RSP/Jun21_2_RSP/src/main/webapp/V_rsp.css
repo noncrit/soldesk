@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#ro{
+	width:100px;
+	height:100px;
+	background-image:url('img/ro.PNG');
+	background-size: cover;
+}
+
+#pa{
+	width:100px;
+	height:100px;
+	background-image:url('img/pa.PNG');
+	background-size: cover;
+}
+
+#sc{
+	width:100px;
+	height:100px;
+	background-image:url('img/sc.PNG');
+	background-size: cover;
+}
