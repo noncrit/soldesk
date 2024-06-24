@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+#A_table_div{
+	background-color: white;
+	color:red;
+
+}
+#A_table{
+	width: 90%
+
+}
+
+
+#A_table_div tr td{
+	width:400px;
+	height:100%;
+	text-align: center;
+	background-color: transparent;
+	font-size: 10pt;
+
+}
+
+#A_table_div tr{
+	width:900px;
+	height:100%;
+	text-align: center;
+	background-color: transparent;
+	font-size: 10pt;
+
+}
+
+a{
+	text-decoration: none;
+	color:black;
+}
+
