@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+body{
+	color: white;
+}
+
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+	border-color:white;
+	background-image: url('img/predator.jpg');
+	background-size:cover;
+}
+
+#two td{
+	margin-left: auto;
+	margin-right:auto;
+}
+
+input{
+	border:white sold 3px;
+	border-radius: 10px;
+	outline:none;
+	background-color: transparent;
+	color: white;
+	text-align:center;
+	width: 96%;
+	height:40px;
+}
+
+input::focus{
+	outline:none;
+}
+
+button{
+	width: 60px;
+	height: 30px;
+	background-color: transparent;
+	text-align: center;
+	border-radius: 10px;
+}
+button:hover{
+	
+	background-color: green;
+	
+}
+
+
+#button_div{
+	text-align:center;
+}
