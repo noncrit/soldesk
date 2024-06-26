@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+#AppleTbltitle{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#AppleTblTitle th{
+	color: #ff0080;
+}
+
+#AppleTbl{
+	margin-top: 40px;
+	
+}
+
+#AppleTbl th{
+	color: black;
+	background-color: white;
+	font-weight: lighter;
+}
+
+
+#imgdiv{
+	float:left;
+	margin-top: -300px;
+}
+
+#imgdiv2{
+	float:right;
+	margin-top: -300px;
+}
+
+.img{
+	width: 350px;
+	height:	350px;
+}
+
