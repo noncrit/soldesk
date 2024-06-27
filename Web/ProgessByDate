@@ -10,3 +10,4 @@
 6/24 JSP Model 2 - 숫자 야구 실습 / JSP - Custom Tag 기초 진행
 6/25 JSP - JSTL 활용, Custom Tag 마무리
 6/26 JSP - Model 2 기반 DB 연동 실습 진행 / DB 생성, ConnectionPool 생성(context.xml파일로 java에서 생성)+연동 / JSP에 DB 연동 / Select(R), Insert(U) 작업 수행하는 페이지 구현
+6/27 JSP - MOdel 2 기능 구현 / Paiging(RowNum 활용), Insert, Update, Delete
