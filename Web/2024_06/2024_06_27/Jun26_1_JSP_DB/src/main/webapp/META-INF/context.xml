@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource
+		name="ksjPool"
+		type="javax.sql.DataSource"
+		driverClassName="oracle.jdbc.driver.OracleDriver"
+		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+		username="jin"
+		password="asd321"
+		url="jdbc:oracle:thin:@localhost:1521:xe"
+		maxTotal="500"
+		maxIdle="100"
+	/>
+</Context>
+
+<!--
+name="ksjPool" 
+connection pool의 이름을 지정, 
+이름을 통해 DBC(DB Connection Pool)에 접근, 이용 가능
+
+type="javax.sql.DataSource"
+고정값
+
+driverClassName="oracle.jdbc.driver.OracleDriver"
+DB Driver의 종류 (현재 Oracle 사용중)
+
+factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+DBCP를 관리해주는 JNDI(Java Naming and Directory Interface) 팩토리
+서비스에서 제공해주는 데이터나 객체를 발견(discover), 참고(lookup)하기 위한 자바의 API
+즉, 자바 어플리케이션을 외부 서비스에 연결 할 때 사용함
+
+username="ji"
+DB 접속 ID
+
+password="asd32"
+DB 접속 비밀번호
+		
+url="jdbc:oracle:thin:@localhost:xe"
+DB 연결 시 Connection URL
+
+maxTotal="500"
+동시에 사용가능한 커넥션 객체의 최대 수 (기본 8)
+
+maxIdle="100"
+커넥션 풀에 객체를 반납 할 때, 최대로 유지 가능한 커넥션 갯수
+(Idle 상태로 유지 가능한 최대 객체 갯수)
+	/>
+-->

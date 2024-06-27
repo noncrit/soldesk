@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+font-face{
+	font-family: "MilkBread";
+	src:url("MilkBread.ttf");
+}
+
+#AppleTbltitle{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#AppleTblTitle th{
+	color: #ff0080;
+}
+
+#AppleTbl{
+	margin-top: 40px;
+	
+}
+
+#AppleTbl th{
+	color: black;
+	background-color: white;
+	font-weight: lighter;
+}
+
+
+#imgdiv{
+	position:fixed;
+	float:left;
+	left:50px;
+	top:250px;
+}
+
+#imgdiv2{
+	position:fixed;
+	float:right;
+	right:50px;
+	top:250px;
+	
+}
+
+.img{
+	width: 200px;
+	height:	200px;
+}
+
+#ApplePagingForm button{
+	background-color: white;
+	font-family: "MilkBread";
+	font-style:italic;
+	border-radius: 6px;
+	padding: 30px 30x;
+}
+
+.dataTR input{
+	background-color: transparent;
+	font-family: "MilkBread";
+	font-size:20pt;
+	text-align:center;
+	color:white;
+	border: none;
+	
+}
+
