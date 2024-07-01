@@ -11,5 +11,6 @@
 6/25 JSP - JSTL 활용, Custom Tag 마무리
 6/26 JSP - Model 2 기반 DB 연동 실습 진행 / DB 생성, ConnectionPool 생성(context.xml파일로 java에서 생성)+연동 / JSP에 DB 연동 / Select(R), Insert(U) 작업 수행하는 페이지 구현
 6/27 JSP - Model 2 기능 구현 / Paiging(RowNum 활용), Insert, Update, Delete
-6/28 JSp - Model 2 그 동안 배운 내용 총 정리/ Session, Cookie / 로그인 포함 그 동안 배운거 다 쓰는 예제 진행
-6/28 귀가 후 ~ 6/30 주말동안 예제 오류와 씨름함...
+6/28 JSP - Model 2 그 동안 배운 내용 총 정리/ Session, Cookie / 로그인 포함 그 동안 배운거 다 쓰는 예제 진행
+6/28 귀가 후 ~ 6/30 주말동안 예제 오류와 씨름 예정 / 예제 게시판 구현을 제외한 유저 컨트롤 모두 구현 완료
+7/01 JSP - Model 2 / 게시판 기능 구현(게시글 DB 구현, 게시판 보기(로그인 유저/비로그인 유저 분리), 게시글 페이징 처리, 게시글 수정) 구현/ 게시글 삭제는 시간상 스킵, CSS 다듬기도 시간상 스킵...
