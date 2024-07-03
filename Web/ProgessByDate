@@ -16,3 +16,5 @@
 7/01 JSP - Model 2 / 게시판 기능 구현(게시글 DB 구현, 게시판 보기(로그인 유저/비로그인 유저 분리), 게시글 페이징 처리, 게시글 수정) 구현/ 게시글 삭제는 시간상 스킵, CSS 다듬기도 시간상 스킵...
 -----------------------------
 7/02 Spring 기본 환경 설정 / 기초, 등장 배경 설명 (겨울(EJB)이 가고 봄(Spring)이 왔다) / DI(Dependency Injection), IoC(Invserion of Control) 패턴 구현 예제 / annotation-autowired 사용 예시
+7/03 Spring 기반 MVC 모델 구현 기초 / @Service, @Autowired를 이용한 Singleton 객체 선언 예제  
+실습 - UnitConverter 강사님 코드에서 배운 부분 -> HashMap 객체 XML 기반으로 선언하기, 저장용 객체 자체를 넘기기, CSS로 원래 html상에서 customTag if로 처리해야 할 부분 좀 더 효율적으로 처리하기
