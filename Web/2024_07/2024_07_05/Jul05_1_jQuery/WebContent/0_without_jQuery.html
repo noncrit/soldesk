@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//JS - 인터프리터 방식 언어 : 실행을 하면 위에서부터 한줄 씩 기계어로 번역해서 실행
+	//컴파일 방식 언어 : 실행을 하면 코드 내용 전체를 컴파일(기계어로 번역) 후 번역해서 실행
+	//인터프리터 방식 - 잘못된 입력이 들어와도 에러가 발생하지 않음 -> 그냥 실행이 안될 뿐... -> 코드 전체를 뜯어봐야함
+	
+	//Html의 DOM 객체의 onXXX 이벤트를 연결
+	function init(){
+		iInput = document.getElementById("i");
+		alert(iInput);
+	}
+	
+	//버튼을 한 번 눌렀을 때
+	//alert 창에 input에 입력된 값이 출력
+	function print(){
+		alert(iInput.value);
+	}
+	
+	//유효성 검사를 좀 편하게 하기 위해 함수 형태로 정리해놨었음
+	//웹페이지 이벤트 처리 - jQuery를 사용해보자!
+	//JS 자체를 편하게 사용 할 수 있도록 함수를 정리해놓은 라이브러리
+</script>
+</head>
+<body onload="init();"> <!-- onload : 페이지 실행 시 로딩이 끝난 후 우리가 지정한 init()이 호출됨  -->
+	<input id="i">
+	<button onclick="print();">Print</button>
+</body>
+</html>
