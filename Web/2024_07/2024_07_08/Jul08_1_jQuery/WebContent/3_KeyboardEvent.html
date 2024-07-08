@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("input").keydown(function(){
+		/* $("h1").text("키보드를 누르는 동안");
+		//input에 뭔가를 입력해도 값이 안들어감
+		//기능을 발동하기 전에 return false시키면 
+		//원래 기능을 못하도록 막을 수 있음
+		return false; */
+	});
+	
+	//특정한 키를 눌렀을 때 뭔가 하고 싶다면
+	$("input").keydown(function(e){
+		//키보드 아스키값이 출력됨 : 모든 키에는 고유값이 있음
+		$("h1").text(e.keyCode);
+	
+		if(e.keyCode==13){
+			alert('와우~');
+		} else if (e.keyCode == 65){
+			//a 키를 못누르게 막는 코드
+			return false;
+		} else if (e.keyCode == 83){
+			//s키 기능을 막고, ㅋ이 input에 들어가도록 
+			let t = $("input").val();
+			$("input").val(t+"ㅋ");
+			return false;
+			//근데 return 을 주석처리하면 sㅋsㅋ이 아니라, ㅋsㅋsㅋs가 나옴
+			//why? - 변수값 가져오는 과정이 더 느리기에 ㅋ이 먼저 넘어옴
+		}
+		
+	});
+	
+	//키보드에서 손을 떼면
+	$("input").keyup(function(){
+		$("h1").text("키보드에서 손 떼면");
+	});
+	
+	//html 자체에도 keydown 이벤트를 심을 수 있음
+	let l = 0;
+	$("html").keydown(function(e){
+		//f5 키 봉인
+/* 		if(e.keyCode == 116){
+			return false;
+		} */
+		
+		if(e.keyCode == 39){
+			l +=5;
+			$("h2").css("left", l+"px");
+		}
+		
+		
+	});
+});
+
+</script>
+
+<style type="text/css">
+	h2{
+		position:fixed;
+	}
+</style>
+</head>
+<body>
+	<h2>텍스트</h2>
+	<input>
+	<h1></h1>
+</body>
+</html>

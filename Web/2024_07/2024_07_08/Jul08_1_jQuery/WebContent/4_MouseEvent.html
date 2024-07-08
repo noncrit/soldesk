@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("div").mousedown(function(){
+		$("h1").text("mousedown");
+	});
+	
+	$("div").mouseup(function(){
+		$("h1").text("mouseup");
+	});
+	
+	$("div").mouseenter(function(){
+		$("h1").text("mouseenter");
+	});
+	
+	$("div").mouseleave(function(){
+		$("h1").text("mouseleave");
+	});
+	
+	//div 내에서 마우스의 좌표를 알고싶다
+	//근데 좌표는 html 문서 기준임 - div 기준으로 잡고싶다
+	$("div").mousemove(function(e){
+		$("h2").text("mousemove : " + e.pageX + " , " + e.pageY);
+		
+		//DOM 객체의 정확한 좌표를 알고 싶다.
+		//offset -> 특정한 함수로 임의 이동할 때 나타남
+		let divX = $("div").offset().left; //선택자의 정확한 X 좌표
+		let divY = $("div").offset().top;
+		
+		let x=e.pageX-divX;
+		let y=e.pageY-divY
+		$("h2").text("정확한 좌표 : "+ x +"," + y);
+	});
+	
+	//이미지가 마우스 커서를 따라다니도록 처리
+	$("html").mousemove(function(e){
+		$("img").css("left", (e.pageX +1) + "px");
+		$("img").css("top", (e.pageY +1) + "px");
+	});
+	
+	//마우스 우클릭 했을 때 메뉴창이 안나오도록
+	//document : html을 가리키는 내장 객체
+	//주석 처리한 부분 함수대로면 우클릭을해서 메뉴가 나오려는 순간 alert창이 뜸(메뉴창도 뜸)
+	$(document).contextmenu(function(){
+		/* alert("메뉴다!"); */
+		return false;
+	});
+	
+	//어떤 상황에서든 mousedown이 발생했을 때,
+	//그 중에서도 우클릭이 발생했을 때 클릭한 위치에 테이블이 나타났다가 3초뒤에 사라지면서
+	//0.3초 후에 원위치로 돌아가도록
+	
+	//첫 우클릭 후 3초가 지나면 뒤에 몇번을 눌러도 처음 3초 기준으로
+	//동작하는 문제를 해결하기위한 전열변수
+	let timeout;
+	$("html").mousedown(function(e){
+		if(e.button == 2){
+			$("table").css("opacity","1");
+			$("table").css("left", e.pageX + "px");
+			$("table").css("top", e.pageY + "px");
+		}
+	clearTimeout(timeout);
+		
+	timeout=setTimeout(()=>{
+			$("table").css("opacity","0");
+			setTimeout(() => {
+				$("table").css("left", "-100px");
+				$("table").css("top", "-100px");
+			}, 300);
+			
+		}, 3000);
+	});
+	
+	//직접입력 칸 구현
+	$("select").change(function(){
+		let t = $(this).val();
+		alert(t);
+		
+		if(t==="직접 입력"){
+			//select의 효력 날려버리기
+			$(this).removeAttr("name");
+			let eAddr = $("<input>").attr("name","eAddr");
+			$("#address").append(eAddr);
+		} else{
+			$("#address").empty();
+			$(this).attr("name", "eAddr");
+		}
+		
+	});
+	
+	
+});
+</script>
+
+<style type="text/css">
+	div{
+		border:pink solid 3px;
+		width: 200px;
+		height: 200px;
+	}
+	/* 마우스 커서 이미지로 바꾸는 과정*/
+	img{
+		position:fixed;
+	}
+	
+	body{
+		cursor:none;
+	}
+	
+	table{
+		position : fixed;
+		opacity:0;
+		top: -100px;
+		left: -100px;
+		trasition: opacity 0.3s ease-up
+	}
+</style>
+</head>
+<body>
+	<div></div>
+	<h1></h1>
+	<h2></h2>
+	<img src="blackcat.png">
+	
+	<table border="1">
+		<tr>
+			<td><a href="https://www.naver.com">네이버로</td>
+		</tr>
+		
+		<tr>
+			<td><a href="https://www.youtube.com">유튜브로</td>
+		</tr>
+		
+		<tr>
+			<td><a href="https://www.google.com">구글로</td>
+		</tr>
+	</table>
+	
+	<hr>
+	<select>
+		<option value="naver.com">naver.com</option>
+		<option value="gmail.com">gmail.com</option>
+		<option value="daum.net">daum.net</option>
+		<option>직접 입력</option>
+	</select>
+	<div id="address"></div>
+</body>
+</html>
