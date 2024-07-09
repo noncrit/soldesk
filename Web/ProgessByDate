@@ -21,3 +21,4 @@
 7/04 Spring Maven Repository 활용법 기초, 실습 진행 / Spring MyBatis 기반 DB 연동, 기초 실습 과제(Student&Exam) 진행 -> input - javaController - javaDAO - javaInterface(Mapper) - MyBatisXML(SQL) 관계 숙지
 7/05 JQuery 기초 진행 / 기본 문법, 이벤트 처리, CSS 디자인에 활용, 반복문 / 배운 기초 기반으로 간단한 예제 실습
 7/08 JQuery 나머지 부분 진행 / Spring Fruit 실습 진행
+7/09 Fruit 테이블 이어서 AJAX 내용까지 진행, 스프링 RequestMapping - produces 를 이용해 XML, JSON 객체 생성, View 측에서 데이터 처리하는 것 까지 진행 
