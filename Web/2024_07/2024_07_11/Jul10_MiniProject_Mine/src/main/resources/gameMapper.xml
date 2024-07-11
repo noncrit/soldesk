@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kim.julMini.game.GameMapper">
+
+<select id="getUserResult" parameterType="com.kim.julMini.user.User" 
+resultType="com.kim.julMini.user.User">
+	select * from jul10_userData where user_code = #{user_code}
+</select>
+
+<update id="updateUserRecord" parameterType="com.kim.julMini.user.User">
+	update jul10_userData set win=#{win}, lose=#{lose}, total_play=(#{win} + #{lose})
+	where user_code = #{user_code}
+</update>
+
+<insert id="regUser" parameterType="com.kim.julMini.user.User">
+	insert into jul10_userData values(#{user_code}, #{name}, #{win}, #{lose}, #{total_play})
+</insert>
+
+
+
+</mapper>
