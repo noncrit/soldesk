@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+	//AJAX - JS 활용 -> 데이터를 웹 브라우저로 보내주는 기술
+	//지금같은 경우는 프로젝트 스코프도 다르고, 연결 선언도 다른 경우 -> 브라우저의 동일 출처 정책에 걸림
+	//AJAX는 다른 사람의 것을 가져올 수가 없음
+	//동일 출처 정책 : 웹과 상호작용을 하는 JS 코드에 대한 보안 정책
+	
+	//Cross Domain AJAX
+	//타인이 만든 데이터를 가져오기 위한 AJAX
+	
+	//서버 측에서 다른 사람에게 주고 싶다
+	//1) JSONP (JSON with Padding)
+	//일부러 JSON 모양을 뭉개버려서 JSON이 아닌 것 처럼 위장 => AJAX가 아니도록 위장
+	//2)응답 헤더 : Access-Control-Allow-Origin 세팅
+	//3)proxy 서버 : 서버와 클라이언트 사이에 중계 기능을 해줌 => IP 주소를 우회해서 사용
+	//기상청은 AJAX로는 데이터를 못 가져오지만, JAVA로는 가능함
+	//기상청 데이터를 가져와서 가공하고 AJAX로 사용하기
+	
+$(function(){
+	//alert('asdf');
+	//이 html은 다른 곳에서 타 유저의 브라우저라 가정(톰캣으로 직접 여는게 아니라 브라우저 창에 끌어왔음)
+		
+	//JSON 데이터 얼럿 창에 띄우기
+	$.getJSON("http://localhost/jul092/error.getJSON", function(asd){
+		alert(JSON.stringify(asd));
+	});
+	
+	//기상청 데이터 들고오기 - 근데 안나옴 - 기상청은 Cross Domain 응답헤더 세팅이 없다.
+	//그러면 클라이언트가 직접 작업해야함
+	$.ajax({
+		url: "https://www.kma.go.kr/wid/queryDFSRSS.jsp",
+		data:{zone:"1168060000"},
+		success: function(asd){
+			alert(asd);
+		}
+	});
+		
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
