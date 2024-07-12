@@ -1,0 +1,28 @@
+6/11 Web 기초 시작, tag 부터 table 구현까지 실습함
+6/12 css 실습, 방명록 게시판, 미디어 태그 다루는거 실습
+6/13 css 심화, servlet 기초/실습 진행
+6/14 Servlet 기반 파일 입출력, JavaScript 기초 진행
+6/17 JavaScript 05_operator ~ 09 ArrowFunction까지 진행
+6/18 JavaScript 10~11 기초 끝,  JS ValidCheck 진행, BMI 실습 진행
+6/19 JSP 기초 진행, PageTrans 구현까지 실습
+6/20 JSP Model 2 개념 정리, 기본 설명, BMI 심화 예제 작성, 자기소개서 특강 진행
+6/21 EL 기초, 활용 학습 / JSP Model 2 예제 실습(RSP, 홀짝)
+6/24 JSP Model 2 - 숫자 야구 실습 / JSP - Custom Tag 기초 진행
+6/25 JSP - JSTL 활용, Custom Tag 마무리
+6/26 JSP - Model 2 기반 DB 연동 실습 진행 / DB 생성, ConnectionPool 생성(context.xml파일로 java에서 생성)+연동 / JSP에 DB 연동 / Select(R), Insert(U) 작업 수행하는 페이지 구현
+6/27 JSP - Model 2 기능 구현 / Paiging(RowNum 활용), Insert, Update, Delete
+6/28 JSP - Model 2 그 동안 배운 내용 총 정리/ Session, Cookie / 로그인 포함 그 동안 배운거 다 쓰는 예제 진행
+6/28 귀가 후 ~ 6/30 주말동안 예제 오류와 씨름 예정 / 예제 게시판 구현을 제외한 유저 컨트롤 모두 구현 완료
+7/01 JSP - Model 2 / 게시판 기능 구현(게시글 DB 구현, 게시판 보기(로그인 유저/비로그인 유저 분리), 게시글 페이징 처리, 게시글 수정) 구현/ 게시글 삭제는 시간상 스킵, CSS 다듬기도 시간상 스킵...
+-----------------------------
+7/02 Spring 기본 환경 설정 / 기초, 등장 배경 설명 (겨울(EJB)이 가고 봄(Spring)이 왔다) / DI(Dependency Injection), IoC(Invserion of Control) 패턴 구현 예제 / annotation-autowired 사용 예시
+7/03 Spring 기반 MVC 모델 구현 기초 / @Service, @Autowired를 이용한 Singleton 객체 선언 예제  
+실습 - UnitConverter 강사님 코드에서 배운 부분 -> HashMap 객체 XML 기반으로 선언하기, 저장용 객체 자체를 넘기기, CSS로 원래 html상에서 customTag if로 처리해야 할 부분 좀 더 효율적으로 처리하기
+7/04 Spring Maven Repository 활용법 기초, 실습 진행 / Spring MyBatis 기반 DB 연동, 기초 실습 과제(Student&Exam) 진행 -> input - javaController - javaDAO - javaInterface(Mapper) - MyBatisXML(SQL) 관계 숙지
+7/05 JQuery 기초 진행 / 기본 문법, 이벤트 처리, CSS 디자인에 활용, 반복문 / 배운 기초 기반으로 간단한 예제 실습
+7/08 JQuery 나머지 부분 진행 / Spring Fruit 실습 진행
+7/09 Fruit 테이블 이어서 AJAX 내용까지 진행, 스프링 RequestMapping - produces 를 이용해 XML, JSON 객체 생성, View 측에서 데이터 처리하는 것 까지 진행 
+7/10 AJAX 심화 활용 - 기상청 RSS 데이터 파싱 - xml, json 두 형태로 ajax 기반 활용/ 자율 복습 시간 - 알아서 예제 만들기
+7/11 자율 복습 시간 - 알아서 예제 만들기 이어서 -> 기상청 날씨 RSS 데이터 기반 맞추기 게임 예제 제작
+-------------------------------
+7/12 Python 설치/ 환경설정 진행 / 출력, 변수, 형 변환, 키보드 입력(input), 연산자, Collection 까지 구현완료
