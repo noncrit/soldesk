@@ -1,5 +1,5 @@
-#6vURfrQzt4AT0WX0nJc9
-#8Mf7WTOGQY
+#a
+#a
 from http.client import HTTPSConnection
 from urllib.parse import quote
 from xml.etree.ElementTree import fromstring
@@ -18,8 +18,8 @@ pname = quote(pname)
 print(pname)
 
 hcs = HTTPSConnection("openapi.naver.com")
-headers = {"X-Naver-Client-Id":"6vURfrQzt4AT0WX0nJc9",
-           "X-Naver-Client-Secret":"8Mf7WTOGQY"}
+headers = {"X-Naver-Client-Id":"a",
+           "X-Naver-Client-Secret":"a"}
 #이번에는 단순 검색요청이라 body에 데이터 들어갈게 없음
 hcs.request("GET", f"/v1/search/shop.xml?query={pname}", headers=headers)
 
