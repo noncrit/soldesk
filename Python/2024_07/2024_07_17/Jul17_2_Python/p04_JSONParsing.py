@@ -1,4 +1,4 @@
-#6fba57e94e4317694bf83087f3fe44f5
+#a
 #https://dapi.kakao.com/v3/search/book
 from http.client import HTTPSConnection
 from httpx._urlparse import quote
@@ -12,9 +12,9 @@ search = quote(search)
 print(search)
 
 
-api = '6fba57e94e4317694bf83087f3fe44f5'
+api = 'a'
 h = {
-        "Authorization":"KakaoAK 6fba57e94e4317694bf83087f3fe44f5"
+        "Authorization":"KakaoAK a"
     }
 
 huc = HTTPSConnection("dapi.kakao.com")
