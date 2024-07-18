@@ -29,3 +29,4 @@
 7/15 Python 반복문. 함수 마저 진행 - 예제로 익숙해지는 시간
 7/16 Python 상속, 클래스 멤버변수 다루기 / Exception Handling, date 처리 학습
 7/17 Python을 이용한 XML Parsingm, JSON Parsing 학습 / 기상청, OpenWeather, Kakao API, Naver API 이용한 간단한 서비스 구현
+7/18 Python 파일 처리, DB 연동 기초 수업 진행, 수업 내용을 바탕으로 간단한 예제까지 구현 완료(coffee 테이블, .csv파일 작성 등) 
