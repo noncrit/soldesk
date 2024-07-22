@@ -31,3 +31,4 @@
 7/17 Python을 이용한 XML Parsingm, JSON Parsing 학습 / 기상청, OpenWeather, Kakao API, Naver API 이용한 간단한 서비스 구현
 7/18 Python 파일 처리, DB 연동 기초 수업 진행, 수업 내용을 바탕으로 간단한 예제까지 구현 완료(coffee 테이블, .csv파일 작성 등)
 7/19 Python 이용한 웹 데이터 Parsing - RSS->JSON, XML 파싱 -> DB에 데이터 입/출력, 정리된 데이터 csv 파일 형식으로 출력
+7/22 Python 웹 크롤링 - 이미지 파일 긁어오기, 특정 검색 데이터 입력한 결과값 가져오기, 출력 형태가 여러 형태인 데이터(NaverMusic 가사) 받아오기 등등
