@@ -34,7 +34,7 @@
 7/22 Python 웹 크롤링 - 이미지 파일 긁어오기, 특정 검색 데이터 입력한 결과값 가져오기, 출력 형태가 여러 형태인 데이터(NaverMusic 가사) 받아오기 등등
 7/23 Python API 서비스를 이용한 데이터 수집(Daum, naver, kakaoTalk) 및 실습 진행/ 데이터 처리 후 csv 형식, json 형식으로 파일 처리, 카카오톡 채팅방에서 대화만 추출하기, 단어 등장 빈도수 그래프로 시각화
 7/24 Matplotlib 그래프 활용 / BusData ( 비교적 큰 데이터 ) 긁어오는 코드 구현
-7/25 
+7/25 지하철 데이터 처리 - 그래프 그리기 , Pandas 찍먹
 7/26 MongoDB Set up
-7/29 MongoDB Basic
+7/29 MongoDB Basic, practice
 7/30 Numpy - 기초 문법, 기초 자료 구조 / 간단한 예제 실습
