@@ -39,3 +39,5 @@
 7/29 MongoDB Basic, practice
 7/30 Numpy - 기초 문법, 기초 자료 구조 / 간단한 예제 실습
 7/31 Numpy - Colab 이용한 기초 문법 실습 / 신생아 남아/여아 별 출생수 데이터를 이용한 간단한 데이터 처리 실습 진행
+-------------------------------
+8/01 Pandas Basic 진행 / Series, DataFrame의 개념, 연산 처리 방식, Colab 환경에서 파일 처리 방식 학습( DataFrame <-> .csv )
