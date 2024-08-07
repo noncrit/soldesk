@@ -43,3 +43,6 @@
 8/01 Pandas Basic 진행 / Series, DataFrame의 개념, 연산 처리 방식, Colab 환경에서 파일 처리 방식 학습( DataFrame <-> .csv )
 8/02 Pandas 이어서 / Data 기초 처리 (shape, describe, info, value_counts(dropna = False) 등), 자료형 변환, 범주형 데이터(Category) 처리, 시계열 데이터 처리, Function Mapping
 8/05 Pandas 마지막 - Series.str.get(인덱스) 이용한 열 분리 작업 , 이론 수업 끝나고 최종 실습 - 메뉴판닷컴 크롤링 실습(beautifulSoup4 이용)
+-------------------------------
+8/06 AI 시작 - 텍스트 처리 / 전처리 기법 , Regex 이용한 텍스트 전처리, 인코딩, 정수 인코딩
+8/07 AI - 한국어 정수 인코딩, 패딩, One-Hot Encoding / World2Vec 모델 사용한 네이버 영화 리뷰 데이터 처리 예제 진행
