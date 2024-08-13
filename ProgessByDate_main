@@ -49,3 +49,4 @@
 8/08 AI - SVM 기초, sklearn 유방암 데이터 기반 간단한 실습 예제 진행, Naive Bayes 기초, 날씨에 따른 반바지, 긴바지 추천 / Iris Classification 실습 진행
 8/09 AI - Decision Problem - Tree 기반 학습 기초 진행 / 실습 진행
 8/12 AI - Deep Learning 기초 이론 진행 / Tensorflow 기본 자료구조, 기본적인 함수들 소개 / 간단한 실습
+8/13 AI - Tensorflow 활용한 데이터 처리 예제(BMI 데이터 생성, 처리), Tensorflow-keras callback, checkpoint 옵션 정리, RNN 모델 활용 예시 파일 읽어봄(추후 복습 필요)
